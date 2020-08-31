@@ -1,0 +1,141 @@
+/*页面背景*/
+
+page {
+  background-color: rgba(187, 198, 205, 0.2);
+}
+
+/* 顶部样式 */
+
+.mine-top {
+  width: 85%;
+  height: 200rpx;
+  display: flex;
+  margin: auto;
+  align-items: center;
+}
+
+.mine-top .mine-img {
+  margin-right: 20rpx;
+}
+
+.mine-top .mine-img image {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  box-shadow: 0 6rpx 12rpx rgba(159, 167, 172, 0.5);
+}
+
+.mine-top .mine-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mine-top .nickname {
+  font-size: 40rpx;
+  font-family: SimHei;
+  font-weight: Regular;
+}
+
+.mine-top .lable-container {
+  display: flex;
+  margin-top: 10rpx;
+}
+
+.mine-top .sex image {
+  height: 44rpx;
+  width: 44rpx;
+  margin: auto;
+  margin-right: 10rpx;
+}
+
+.mine-top .certification image {
+  height: 46rpx;
+  width: 46rpx;
+  margin: auto;
+}
+
+.mine-top .certification view {
+  display: flex;
+}
+
+.mine-top .certification text {
+  margin: auto;
+  margin-left: 8rpx;
+}
+
+.mine-top .container-right {
+  display: flex;
+}
+
+.mine-top .container-right image {
+  width: 32rpx;
+  height: 32rpx;
+  margin: auto;
+}
+
+.mine-top .container-right view {
+  margin: auto;
+  font-size: 30rpx;
+}
+
+.mine-middle {
+  width: 93%;
+  border-radius: 24rpx;
+  height: 180rpx;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  box-shadow: 0 6rpx 12rpx rgba(159, 167, 172, 1);
+}
+
+.mine-middle .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mine-middle .item image {
+  height: 60rpx;
+  width: 60rpx;
+  margin: auto;
+}
+
+.mine-middle .item text {
+  display: block;
+}
+
+.mine-bottom {
+  width: 93%;
+  /* display: flex; */
+  margin: auto;
+  background-color: #fff;
+  margin-top: 40rpx;
+  border-radius: 24rpx;
+  box-shadow: 0 6rpx 12rpx rgba(159, 167, 172, 1);
+}
+
+.mine-bottom .item {
+  position: relative;
+  width: 90%;
+  display: flex;
+  margin: auto;
+  height: 90rpx;
+  font-size: 30rpx;
+  align-items: center;
+}
+
+.mine-bottom .item:not(:last-child) {
+  border-bottom: 2rpx solid rgb(243, 242, 242);
+}
+
+.mine-bottom .item::after {
+  content: ">";
+  color: #333;
+  font-weight: 550;
+  position: absolute;
+  right: 0;
+  font-size: 38rpx;
+}

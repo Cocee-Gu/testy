@@ -1,0 +1,62 @@
+<!--个人信息-->
+<view class="message">
+  <view class="first">
+    <image bindtap='' src="/image/secondHandBook_image/shb_mine_tx.png" />
+    <view class="name">
+      <text>刘芬芬</text>
+    </view>
+  </view>
+  <view class="second">
+    <view class="confirm">
+      身份信息认证
+    </view>
+    <view class="reconfirm">
+      重新认证
+    </view>  
+    <image bindtap='' class="arrow" src="/image/secondHandBook_image/shb_arrows.png"></image> 
+  </view>
+  <view class="second">
+    <view class="confirm">
+      计算机科学学院
+    </view>  
+  </view>
+  <view class="second">
+    <view class="confirm">
+      数字媒体技术
+    </view>
+  </view>
+</view>
+<!--个人信息结束-->
+
+<!--我的发布-->
+<view class="shb_pub">
+  <view class="shb_mp">
+  <text class="shb_publish">我的发布</text>
+  </view> 
+</view>
+<view class="icon">
+  <view class="send">
+      <navigator bindtap='bookDetail'>
+      <image class="img1" src="/image/mine-bg.png" />
+      <image class="img2" src="/image/secondHandBook_image/shb_publish.png" />
+      </navigator>
+    </view>
+</view>
+<view class="all">
+  <navigator bindtap='bookDetail'>
+  全部（12）
+  <image class="arrow2" src="/image/secondHandBook_image/shb_arrows2.png"></image></navigator>
+</view>
+<view class="pub_pics">
+    <navigator bindtap='bookDetail'>
+    <image class="bp1" src="/image/secondHandBook_image/shb_pub1.png" />
+    <image class="bp2" src="/image/secondHandBook_image/shb_pub2.png" />
+    <image class="bp3" src="/image/secondHandBook_image/shb_pub3.png" />
+    <image class="bp4" src="/image/secondHandBook_image/shb_pub4.png" />
+    </navigator>
+  </view>
+<!--我的发布结束-->
+
+
+<import src="/pages/secondHandBook/tabbar_template/index.wxml"/>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>

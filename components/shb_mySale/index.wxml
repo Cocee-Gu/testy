@@ -1,0 +1,8 @@
+<!-- 此组件用于二手图书中我发布的转卖的部分 -->
+<view class="books_box">
+    <image class="book_image" src="{{booksArr.img}}" />
+    <view class="book_name">{{booksArr.name}}</view>
+    <view class="book_author">{{booksArr.author}}</view>
+    <view class="book_price">{{booksArr.price}}</view>
+    <view class="book_new">{{booksArr.new}}</view>
+</view> 

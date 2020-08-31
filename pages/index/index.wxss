@@ -1,0 +1,467 @@
+/**index.wxss**/
+page {
+  background: rgba(88, 122, 141, 0.54);
+}
+/* .userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+} */
+.index_all {
+  background: rgba(255, 255, 255, 0.43);
+  position: absolute;
+}
+.swiper_back {
+  height: 270rpx;
+  width: 100%;
+  background-color: #284352;
+  position: absolute;
+}
+.wx-swiper-dots .wx-swiper-dot {
+  width: 14rpx;
+  height: 14rpx;
+}
+.wx-swiper-dots .wx-swiper-dot-active {
+  width: 16rpx;
+  height: 16rpx;
+  transform: translateY(1rpx);
+}
+/* 轮播图部分 */
+.carousel_box {
+  position: relative;
+  height: 344rpx;
+  width: 100vw;
+}
+.carousel_box swiper {
+  height: 100%;
+}
+.carousel_box swiper .swiper_item {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+}
+.carousel_box swiper .swiper_item .swiper_image {
+  transition: all 0.5s;
+  transform: translateY(10rpx);
+  width: 85%;
+  height: 70%;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+}
+.tool {
+  /* 工具菜单部分 */
+  width: 696rpx;
+  margin: 16rpx auto;
+  border-radius: 5px;
+}
+.tool .tool_title {
+  /* 工具菜单标题部分样式 */
+  height: 84rpx;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10rpx 10rpx 0 0;
+}
+.tool .tool_title .tool_title_image {
+  /* 工具菜单标题中图片部分样式 */
+  float: left;
+  width: 42rpx;
+  height: 35.76rpx;
+  margin-left: 28rpx;
+  margin-top: 24rpx;
+  margin-bottom: 24rpx;
+}
+.tool .tool_title .tool_title_text {
+  /* 工具菜单中文字样式 */
+  line-height: 48rpx;
+  margin-top: 18rpx;
+  float: left;
+  font-size: 36rpx;
+  color: #727272;
+  margin-left: 28rpx;
+}
+.tool .tool_body {
+  /* 工具栏主题部分,flex布局，每个子元素宽度33.33% */
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 16rpx;
+  height: 340rpx;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 0 0 10rpx 10rpx;
+}
+.tool .tool_body .tool_item {
+  width: 33.33%;
+  margin-top: 16rpx;
+}
+.tool .tool_body .tool_item .image_box {
+  margin: 0 auto;
+  height: 106rpx;
+  width: 106rpx;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.tool .tool_body .tool_item .image_box .tool_item_image {
+  margin: 10rpx auto;
+  width: 41.28rpx;
+  height: 67.76rpx;
+}
+.tool .tool_body .tool_item .tool_item_text {
+  text-align: center;
+  color: #727272;
+  font-size: 28rpx;
+  line-height: 38rpx;
+}
+.mission {
+  /* 任务代办部分样式 */
+  width: 696rpx;
+  margin: 16rpx auto;
+  border-radius: 5px;
+}
+.mission .mission_title {
+  /* 工具菜单标题部分样式 */
+  height: 84rpx;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10rpx 10rpx 0 0;
+}
+.mission .mission_title .mission_title_image {
+  width: 60rpx;
+  height: 60rpx;
+  float: left;
+  margin-left: 18rpx;
+  margin-top: 12rpx;
+  margin-bottom: 12rpx;
+}
+.mission .mission_title .mission_title_text {
+  /* 工具菜单中文字样式 */
+  line-height: 48rpx;
+  margin-top: 18rpx;
+  float: left;
+  font-size: 36rpx;
+  color: #727272;
+  margin-left: 34rpx;
+}
+.mission .mission_body {
+  /* 任务栏主体部分 */
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 0 0 10rpx 10rpx;
+  height: 192rpx;
+  width: 100%;
+}
+.mission .mission_body .mission_body_item {
+  height: 88rpx;
+  padding-top: 34rpx;
+  padding-left: 20rpx;
+  /* 待办任务内容部分 */
+}
+.mission .mission_body .mission_body_item .mission_inf {
+  width: 120rpx;
+  float: left;
+}
+.mission .mission_body .mission_body_item .mission_inf .mission_item_image {
+  height: 88rpx;
+  width: 88rpx;
+  margin-left: 10rpx;
+  padding-right: 60rpx;
+  float: left;
+}
+.mission .mission_body .mission_body_item .mission_inf .mission_item_name {
+  font-size: 28rpx;
+  color: #727272;
+  text-align: center;
+}
+.mission .mission_body .mission_body_item .mission_item_box {
+  float: left;
+  padding-left: 40rpx;
+  padding-top: 4rpx;
+  /* 过度虚线 */
+}
+.mission .mission_body .mission_body_item .mission_item_box .step_line {
+  float: left;
+  margin-top: 34rpx;
+}
+.mission .mission_body .mission_body_item .mission_item_box .step_line .round {
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #727272;
+  border-radius: 50%;
+  float: left;
+  margin-left: 4rpx;
+}
+.mission .mission_body .mission_body_item .mission_item_box .step_line .dotted {
+  width: 64rpx;
+  height: 0rpx;
+  border-bottom: 2rpx dashed #727272;
+  float: left;
+  padding-top: 9rpx;
+  margin-left: 4rpx;
+}
+.mission .mission_body .mission_body_item .mission_item_box .mission_item {
+  font-size: 28rpx;
+  color: #727272;
+  float: left;
+  margin-top: 22rpx;
+  margin-left: 4rpx;
+}
+.mission .mission_body .mission_body_item .mission_item_box .mission_item .missions {
+  float: left;
+}
+.mission .mission_body .mission_body_item .mission_item_box .mission_item .step_line .dotted {
+  border-bottom: none;
+  border-top: 2rpx dashed #727272;
+  transform: translateY(-15rpx);
+}
+.curriculum {
+  /*课程表部分*/
+  width: 696rpx;
+  margin: 16rpx auto;
+  border-radius: 5px;
+}
+.curriculum .curriculum_title {
+  /* 课表标题部分 */
+  height: 84rpx;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10rpx 10rpx 0 0;
+}
+.curriculum .curriculum_title .curriculum_title_image {
+  width: 74rpx;
+  height: 74rpx;
+  margin-left: 12rpx;
+  float: left;
+}
+.curriculum .curriculum_title .curriculum_title_text {
+  float: left;
+  font-size: 36rpx;
+  color: #727272;
+  margin-left: 26rpx;
+  line-height: 48rpx;
+  margin-top: 18rpx;
+}
+.curriculum .curriculum_title .curriculum_title_hide {
+  float: right;
+  color: #727272;
+  font-size: 36rpx;
+  margin-right: 40rpx;
+  margin-top: 18rpx;
+  line-height: 48rpx;
+}
+.curriculum .curriculum_body {
+  /* 课程表主体部分 */
+  background: rgba(255, 255, 255, 0.75);
+  padding-bottom: 30rpx;
+  border-radius: 0 0 10rpx 10rpx;
+  /* 时间 */
+  /* 课程信息 */
+}
+.curriculum .curriculum_body .curriculum_item_time {
+  padding-left: 50rpx;
+  padding-top: 30rpx;
+  color: #262626;
+  font-size: 32rpx;
+  line-height: 42rpx;
+}
+.curriculum .curriculum_body .curriculum_item_classInf {
+  padding-bottom: 32rpx;
+  /* 课程开始(第几节)时间 */
+}
+.curriculum .curriculum_body .curriculum_item_classInf .part1 {
+  color: #262626;
+  font-size: 36rpx;
+  line-height: 42rpx;
+  display: inline-block;
+  margin-top: 44rpx;
+  margin-left: 50rpx;
+  font-family: Arial;
+}
+.curriculum .curriculum_body .curriculum_item_classInf .name {
+  /* 课程名称 */
+  display: inline-block;
+  font-size: 32rpx;
+  line-height: 21rpx;
+  color: #000;
+  margin-top: 42rpx;
+  margin-left: 50rpx;
+}
+.curriculum .curriculum_body .curriculum_item_classInf .part2 {
+  /* 课程结束时间(第几节) */
+  color: #262626;
+  font-size: 36rpx;
+  display: inline-block;
+  margin-top: 18rpx;
+  margin-left: 50rpx;
+  font-family: Arial;
+}
+.curriculum .curriculum_body .curriculum_item_classInf .add {
+  /* 上课地址 */
+  display: inline-block;
+  font-size: 32rpx;
+  line-height: 21rpx;
+  color: #949494;
+  margin-left: 102rpx;
+}
+.curriculum .curriculum_body .curriculum_item_classInf .part_to {
+  /* 竖线，第几接-第几节那个 */
+  height: 22rpx;
+}
+.curriculum .curriculum_body .curriculum_item_classInf .part_to .line {
+  width: 2rpx;
+  height: 22rpx;
+  background-color: #9e9e9e;
+  position: absolute;
+  margin-top: 8rpx;
+  margin-left: 59rpx;
+}
+.curriculum .curriculum_body .noCurriculum {
+  padding-left: 50rpx;
+  padding-top: 30rpx;
+  color: #262626;
+  font-size: 32rpx;
+  line-height: 100rpx;
+  height: 120rpx;
+}
+/* 课程表底部分界线 */
+.down_line {
+  position: absolute;
+  border-bottom: 2rpx solid #dcdcdc;
+  width: 636rpx;
+  height: 1rpx;
+  margin-left: 22rpx;
+  transform: translateY(32rpx);
+}
+.schedule {
+  /* 日程部分样式 */
+  width: 696rpx;
+  margin: 16rpx auto;
+  border-radius: 5px;
+}
+.schedule .schedule_title {
+  /* 日程部分标题样式 */
+  height: 84rpx;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 5px 5px 0 0;
+}
+.schedule .schedule_title .schedule_title_image {
+  /* 日程标题图片属性 */
+  width: 57.82rpx;
+  height: 55.5rpx;
+  float: left;
+  margin-left: 24rpx;
+  margin-top: 14rpx;
+}
+.schedule .schedule_title .schedule_title_text {
+  /* 日程标题文字部分属性 */
+  float: left;
+  font-size: 36rpx;
+  color: #727272;
+  margin-left: 30rpx;
+  line-height: 48rpx;
+  margin-top: 18rpx;
+}
+.schedule .schedule_title .schedule_title_hide {
+  /* 日程标题折叠部分 */
+  float: right;
+  color: #727272;
+  font-size: 36rpx;
+  margin-right: 40rpx;
+  margin-top: 18rpx;
+  line-height: 48rpx;
+}
+.schedule .schedule_body {
+  /* 日程主体部分样式 */
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 0 0 10rpx 10rpx;
+}
+.schedule .schedule_body .schedule_item {
+  /* 日程包含元素样式 */
+  padding-bottom: 30rpx;
+  margin-bottom: 20rpx;
+}
+.schedule .schedule_body .schedule_item .date {
+  /* 日期 */
+  color: #262626;
+  font-size: 32rpx;
+  line-height: 42rpx;
+  padding-left: 50rpx;
+  padding-top: 34rpx;
+}
+.schedule .schedule_body .schedule_item .week {
+  /* 星期 */
+  font-size: 32rpx;
+  float: left;
+  margin-left: 52rpx;
+  color: #000;
+  line-height: 42rpx;
+  margin-top: 32rpx;
+}
+.schedule .schedule_body .schedule_item .inf {
+  /* 事项 */
+  font-size: 32rpx;
+  float: left;
+  width: 500rpx;
+  margin-left: 52rpx;
+  color: #000;
+  line-height: 42rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 32rpx;
+}
+.schedule .schedule_body .schedule_item .when {
+  /* 日期 */
+  display: inline-block;
+  font-size: 28rpx;
+  line-height: 38rpx;
+  color: #616161;
+  margin-left: 50rpx;
+  margin-top: 28rpx;
+}
+.schedule .schedule_body .schedule_item .time {
+  /* 时间 */
+  display: inline-block;
+  font-size: 28rpx;
+  line-height: 38rpx;
+  color: #262626;
+  margin-left: 54rpx;
+  margin-top: 28rpx;
+}
+.schedule .schedule_body .schedule_item .add {
+  /* 地址 */
+  display: inline-block;
+  font-size: 28rpx;
+  line-height: 38rpx;
+  color: #262626;
+  margin-left: 50rpx;
+  margin-top: 28rpx;
+}
+.schedule .schedule_body .noSchedule {
+  padding-left: 50rpx;
+  padding-top: 30rpx;
+  color: #262626;
+  font-size: 32rpx;
+  line-height: 190rpx;
+  height: 220rpx;
+}
+/* 底部学校图片样式 */
+.image .school_image {
+  opacity: 0.43;
+  width: 750rpx;
+  padding-bottom: 70rpx;
+  position: absolute;
+  z-index: -1;
+}

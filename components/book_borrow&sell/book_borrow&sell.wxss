@@ -1,0 +1,56 @@
+.books_info_box {
+  height: 190rpx;
+  width: 100%;
+  padding-top: 10rpx;
+}
+.books_info_box .book_img {
+  height: 190rpx;
+  width: 160rpx;
+  float: left;
+  margin-left: 22rpx;
+  margin-right: 48rpx;
+}
+
+.book_name {
+  font-size: 24rpx;
+  color: #1a3d51;
+  padding-top: 30rpx;
+}
+.books_info_box .book_author {
+  font-size: 24rpx;
+  color: #9f9f9f;
+  margin-top: 10rpx;
+}
+.books_info_box .book_priceNow {
+  font-size: 24rpx;
+  color: #848484;
+  margin-top: 34rpx;
+  float: left;
+}
+.books_info_box .book_priceOnce {
+  font-size: 24rpx;
+  color: #848484;
+  margin-top: 34rpx;
+  float: right;
+  transform: translateX(-228rpx);
+}
+.books_info_box .book_priceOnce .del_price {
+  text-decoration: line-through;
+  color: rgba(61, 98, 119, 0.92);
+}
+.books_info_box .book_newDegree {
+  width: 118rpx;
+  height: 68rpx;
+  background-color: #fff;
+  color: rgba(61, 98, 119, 0.93);
+  font-size: 24rpx;
+  float: right;
+  text-align: center;
+  line-height: 68rpx;
+  margin-right: 30rpx;
+  /* transform: translateY(-36rpx); */
+  transform: translate(110rpx, -38rpx);
+
+  border-radius: 50%;
+  box-shadow: 0 6rpx 12rpx rgba(92, 92, 92, 0.16);
+}

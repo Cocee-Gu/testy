@@ -1,0 +1,13 @@
+<!-- components/book_borrow&sell/book_borrow&sell.wxml -->
+<!-- 该组件用于渲染图书的售卖或着借阅信息 -->
+<view class="books_info_box">
+    <image class="book_img" src="{{booksInfo.img}}" />
+    <view class="book_name">{{booksInfo.name}}</view>
+    <view class="book_author">{{booksInfo.author}}</view>
+    <view class="book_priceNow">价格 {{booksInfo.priceNow}}￥</view>
+    <view class="book_priceOnce">
+        原价
+        <text class="del_price">>{{booksInfo.priceOnce}}￥</text>
+    </view>
+    <view class="book_newDegree">{{booksInfo.newDegree}}</view>
+</view>

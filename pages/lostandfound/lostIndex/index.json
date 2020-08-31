@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-icon": "../../../miniprogram_npm/dist/icon/index",
+    "van-tab": "../../../miniprogram_npm/dist/tab/index",
+    "van-tabs": "../../../miniprogram_npm/dist/tabs/index"
+  }
+}

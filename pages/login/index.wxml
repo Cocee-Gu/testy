@@ -1,0 +1,5 @@
+<!--pages/login/index.wxml-->
+<button open-type="getUserInfo" bindtap="getUserInfo">获取用户基本信息</button>
+
+<button bindtap="uploadImg">上传图片测试</button>
+

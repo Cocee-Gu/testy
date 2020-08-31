@@ -1,0 +1,3 @@
+<view class="tabber">
+  <image id = wx:for="{{tabber}}" src="{{item.src}}" style="{{item.style}}" data-id="{{item.id}}" wx:key="id" bindtap="navto"></image>
+</view>

@@ -1,0 +1,20 @@
+<!--pages/minePages/certificationPage/index.wxml-->
+<view class="space"></view>
+
+<view class="certification-Container">
+
+ 
+  <view class="item">
+    <view class="main teacher" bindtap="pageNavigation" data-index="01">
+      <text>教职工认证</text>
+    </view>
+  </view>
+
+  <view class="item">
+    <view class="main student" bindtap="pageNavigation" data-index="02">
+      <text>学生认证</text>
+    </view>
+  </view>
+
+
+</view>

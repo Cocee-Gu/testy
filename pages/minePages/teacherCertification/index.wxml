@@ -1,0 +1,40 @@
+<!--pages/minePages/teacherCertification/index.wxml-->
+<!-- 主要内容区域 -->
+<view class="import-detail-contailer">
+  <view class="import-detail-main">
+
+    <view class="item">
+      <view class="lable">工号</view>
+      <view class="input">
+        <input type="number" placeholder="请输入工号" value="{{student_id}}" bindinput="updata" data-value="01"></input>
+      </view>
+    </view>
+
+    <view class="br"></view>
+
+    <view class="item">
+      <view class="lable">密码</view>
+      <view class="input semester">
+        <input placeholder="请输入密码" value="{{password}}" bindinput="updata" data-value="02" type="{{passwordHidden ? 'password' : ''}}"></input>
+        <i-icon wx:if="{{passwordHidden}}" type="browse" size="22" catchtap="hiddenPassword"/>
+        <i-icon wx:if="{{!passwordHidden}}" type="browse_fill" size="22" catchtap="hiddenPassword"/>
+      </view>
+    </view>
+
+    <view class="br"></view>
+
+    <view class="item-img">
+      <view class="lable-img">验证码</view>
+      <view class="image">
+        <input placeholder="请输入验证码" value="{{code}}" bindinput="updata" data-value="03"></input>
+        <image src="/image/mine-tx.png" bindtap="reFreshImg"></image>
+      </view>
+    </view>
+
+
+  </view>
+</view>
+
+<view class="ensure">
+  <view class="ensure-button" bindtap="importClass">导入课程</view>
+</view>

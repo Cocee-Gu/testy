@@ -1,0 +1,20 @@
+<!-- 该页面为当前图书借阅界面 -->
+<!-- 顶部排序方式选择开始 -->
+<view class="sortBy" style="height:100rpx">
+    <view class="byPrice {{sortBy?'choose':''}}" bindtap="changeSort" data-choose="0">
+        价格
+        <image class="img" src="{{sortBy?'/image/secondHandBook_image/排序 (1).png':'/image/secondHandBook_image/排序.png'}}" data-choose="0"></image>
+    </view>
+    <view class="byNew {{sortBy?'':'choose'}}" bindtap="changeSort" data-choose="1">
+        新旧
+        <image class="img" src="{{sortBy?'/image/secondHandBook_image/排序.png':'/image/secondHandBook_image/排序 (1).png'}}" data-choose="1"></image>
+    </view>
+</view>
+<!-- 顶部排序方式选择结束 -->
+<!-- 书本信息开始 -->
+<!-- 书本信息结束 -->
+<block wx:for="{{books_borrow}}" wx:key="index">
+    <navigator url="">
+        <book_borrow booksInfo="{{item}}"></book_borrow>
+    </navigator>
+</block>

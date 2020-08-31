@@ -1,0 +1,50 @@
+<!-- pages/mine/index.wxml -->
+<view class="mine-top">
+  <view class="mine-img">
+    <image src="/image/mine-tx.png"></image>
+  </view>
+  <view class="mine-container">
+    <view class="container-left">
+      <view class="nickname">魔方</view>
+      <view class="lable-container">
+        <view class="sex">
+          <image wx:if="{{true}}" src="/image/mine-male.png"></image>
+          <image wx:if="{{false}}" src="/image/mine-female.png"></image>
+        </view>
+        <view class="certification">
+          <image wx:if="{{false}}" src="/image/mine-certification.png"></image>
+          <view wx:if="{{true}}" >
+            <image src="/image/mine-notCertification.png"></image>
+            <text>未认证</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="container-right">
+      <view catchtap="pageNavigation" data-index="01">编辑个人资料</view>
+      <image src="/image/mine-entry.png" catchtap="pageNavigation" data-index="01"></image>
+    </view>
+  </view>
+</view>
+
+<view class="mine-middle">
+  <view class="item">
+    <image src="/image/mine-star.png" catchtap="pageNavigation" data-index="02"></image>
+    <text catchtap="pageNavigation" data-index="02">我的收藏</text>
+  </view>
+  <view class="item">
+    <image src="/image/mine-publish.png" catchtap="pageNavigation" data-index="03"></image>
+    <text catchtap="pageNavigation" data-index="03">我的发布</text>
+  </view>
+  <view class="item">
+    <image src="/image/mine-message.png"></image>
+    <text>我的消息</text>
+  </view>
+</view>
+
+<view class="mine-bottom">
+  <view class="item" catchtap="pageNavigation" data-index="05">实名认证</view>
+  <view class="item">意见反馈</view>
+  <view class="item">商务合作</view>
+  <view class="item">关于我们</view>
+</view>

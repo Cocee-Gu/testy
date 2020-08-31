@@ -1,0 +1,43 @@
+/* pages/minePages/certificationPage/index.wxss */
+page {
+  background-color:rgba(235, 241, 245, 0.8);
+}
+
+.space {
+  height: 70px;
+}
+
+.certification-Container {
+  contain: "";
+}
+
+.certification-Container .item {
+  margin-top: 140rpx;
+  height: 230rpx;
+  width: 442rpx;
+  margin-left: 154rpx;
+}
+
+.certification-Container .main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  border-radius: 16rpx;
+  background-image: linear-gradient(to bottom right, rgba(61, 98, 119, 0.75), rgba(61, 98, 119, 0.4));
+  font-family: "Microsoft YaHei";
+  font-size: 40rpx;
+  box-shadow: 0 6rpx 12rpx rgba(61, 98, 119, 1);
+}
+
+.certification-Container text {
+  margin: auto;
+}
+
+.certification-Container .teacher {
+  color: #fff;
+}
+
+.certification-Container .student {
+  color: rgba(61, 98, 119, 0.87);
+  background-image: linear-gradient(to top right, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.2));
+}

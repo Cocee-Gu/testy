@@ -1,0 +1,17 @@
+/* component/tabber/index.wxss */
+.tabber {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -2rpx 5rpx rgb(226, 226, 226);
+  background-color: #284252;
+  position: fixed;
+  bottom: 0
+}
+.tabber image {
+  width: 55rpx;
+  height: 55rpx;
+}

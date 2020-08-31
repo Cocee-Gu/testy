@@ -1,0 +1,42 @@
+<!--顶部搜索开始-->
+<van-search bind:search="search" value="{{ value }}" input-align="center" placeholder="请输入搜索关键词" />
+<!--顶部搜索结束-->
+<!--顶部切换-->
+<view class="topbar">
+  <view bindtap="onClick1" style="{{classify === 0?'border-bottom: 4rpx solid #284351;':''}}">丢失</view>
+  <view bindtap="onClick2" style="{{classify === 1?'border-bottom: 4rpx solid #284351;':''}}">捡到</view>
+</view>
+<!--顶部切换结束-->
+<!--顶部分类-->
+<view class="fenlei">
+  <view class="biaoqian" bindtap="change" wx:for="{{option2}}" data-index="{{item.value}}" wx:key="id">
+    <van-icon name="{{item.icon}}" size="40rpx" color="{{item.value === value3?'#284152':''}}" />
+    <label id="item.value" class="{{item.value === value3?'bgc':''}}">{{item.lafCtgName}}</label>
+  </view>
+</view>
+<!--顶部分类结束-->
+<view class="body">
+  <navigator class="informations" url="/pages/detail/index?laf_id={{item.id}}" open-type="navigate" wx:for="{{goods}}" wx:key="id">
+    <image mode="scaleToFill" src="{{item.lafImg[0]}}"></image>
+    <view style="display:flex;flex-direction:row;position: relative">
+      <label style="font-weight:700">{{item.lafCtgName}}啊啊啊啊啊啊啊啊啊啊啊啊啊
+      </label>
+      <label style="font-size:25rpx;position: absolute;right:5rpx;color:#646464">{{item.lafCreateTime}}</label>
+    </view>
+    <text>{{item.lafText}}</text>
+  </navigator>
+</view>
+
+<!--主页面图片结束-->
+
+<!--发布物品按钮开始-->
+<view class="fabu_button">
+  <button class="bottombutton" bindtap="toPublish">发 布 物 品 </button>
+</view>
+<!--发布物品按钮结束-->
+
+<!--底部导航栏开始-->
+<view class="bottom_tabber">
+  <tabber></tabber>
+</view>
+<!--底部导航栏结束-->

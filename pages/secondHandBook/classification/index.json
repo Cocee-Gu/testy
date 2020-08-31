@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "book_borrow": "../../../components/book_borrow&sell/book_borrow&sell"
+  },
+  "navigationBarBackgroundColor": "#284352",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "二手图书市场",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

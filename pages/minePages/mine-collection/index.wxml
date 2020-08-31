@@ -1,0 +1,173 @@
+<!--tabs开始-->
+<tabs tabs="{{tabs}}" bindtabsItemChange="handleTitle">
+   <!--论坛帖子开始-->
+    <block wx:if="{{tabs[0].isActive}}">
+     <scroll-view class="up1" scroll-y="true">
+         <view wx:for="{{listOne}}" wx:key="id">
+            <view class="area">
+                  <view class="message">
+                     <view class="tx">
+                        <!--图片-->
+                        <image src="{{item.url}}" />
+                        <!--名字-->
+                        <text class="name">{{item.name}}</text>
+                     </view>
+                     <view class="sd">
+                        <!--更多选项栏-->
+                        <text class="select">. . .</text>
+                        <!--日期-->
+                        <text class="date">{{item.date}}</text>
+                     </view>
+                  </view>
+                  
+                  <!--论坛内容-->
+                  <view class="content">
+                     <text>{{item.content}}</text>
+                  </view>
+                  <view class="icon">
+                     <!--收藏-->
+                     <view class="collect">
+                        <text class="iconfont icon-shoucang"></text>
+                        <text class="num">1</text>
+                     </view>
+                     <!--评论-->
+                     <view class="pinglun">
+                        <text class="iconfont icon-pinglun"></text>
+                        <text class="num">1</text>
+                     </view>
+                     <!--转发-->
+                     <view class="send">
+                        <text class="iconfont icon-icon--"></text>
+                        <text class="num">1</text>
+                     </view>
+                  </view>
+            </view>
+            <!--分割线-->
+            <view class="line"></view>
+        </view>
+       </scroll-view>
+      </block>
+      <!--论坛帖子结束-->
+
+      <!--二手书开始-->
+      <block wx:elif="{{tabs[1].isActive}}">
+         <scroll-view class="up2" scroll-y="true" > 
+            <tabstwo tabstwo="{{tabstwo}}" bindtabsItemChange="handleTitletwo">
+               <!--转卖开始-->
+               <block wx:if="{{tabstwo[0].isActive}}">
+                  <scroll-view class="up2-1" scroll-y="true">
+                     <view wx:for="{{listtwo_a}}" wx:key="id">
+                        <view class="second">
+                           <view class="tp">
+                              <!--图片-->
+                              <image src="{{item.url}}" />
+                              <view class="message">
+                                 <!--名字-->
+                                 <view class="name">
+                                    <text>{{item.name}}</text>
+                                 </view>
+                                 <!--出版社-->
+                                 <view class="cbs">
+                                    <text>{{item.come}}</text>
+                                 </view>
+                                 <!--价格-->      
+                                 <view class="price">
+                                    <text>价格: {{item.price}}</text>
+                                    <text class="iconfontm icon-qian"></text>
+                                 </view>
+                              </view>
+                           </view>
+                           <!--九成新-->
+                           <view class="new">
+                              <text>{{item.new}}</text>
+                           </view>
+                        </view>
+                        <!--分割线-->
+                        <view class="linetwo"></view>
+                     </view>
+                  </scroll-view> 
+               </block>
+               <!--转卖结束-->
+
+               <!--借阅开始-->
+               <block wx:elif="{{tabstwo[1].isActive}}">
+                  <scroll-view class="up2-1" scroll-y="true">
+                     <view wx:for="{{listtwo_b}}" wx:key="id">
+                        <view class="second">
+                           <view class="tp">
+                              <!--图片-->
+                              <image src="{{item.url}}" />
+                              <view class="message">
+                                 <!--名字-->
+                                 <view class="name">
+                                    <text>{{item.name}}</text>
+                                 </view>
+                                 <!--出版社-->
+                                 <view class="cbs">
+                                    <text>{{item.come}}</text>
+                                 </view>
+                                 <!--价格-->      
+                                 <view class="price">
+                                    <text>价格: {{item.price}}</text>
+                                    <text class="iconfontm icon-qian"></text>
+                                 </view>
+                              </view>
+                           </view>
+                           <!--九成新-->
+                           <view class="new">
+                              <text>{{item.new}}</text>
+                           </view>
+                        </view>
+                        <!--分割线-->
+                        <view class="linetwo"></view>
+                     </view>
+                  </scroll-view>
+               </block>
+               <!--借阅结束-->
+            </tabstwo>
+         </scroll-view>
+      </block>
+      <!--二手书结束-->
+      
+
+      <!--失物招领-->
+      <block wx:elif="{{tabs[2].isActive}}">
+      <scroll-view class="up3" scroll-y="true">
+         <view wx:for="{{listThree}}" wx:key="id">
+            <view class="third">
+               <view class="information">
+                  <!--名字-->
+                  <view class="name">{{item.name}}</view>
+                  <!--日期-->
+                  <view class="date">{{item.date}}</view>
+               </view>
+               <!--图片-->
+               <view class="img">
+                  <image src="{{item.url}}"/>
+                  <image src="{{item.url}}"/>
+                  <image src="{{item.url}}"/>
+               </view>
+               <view class="butt">
+                  <!--丢失-->
+                  <view class="{{item.miss=='丢失'?'miss1':'miss2'}}">
+                     <text>{{item.miss}}</text>
+                  </view>
+                  <view class="wf">
+                     <!--完结-->
+                     <view class="end">
+                        <text>完结</text>
+                     </view>
+                     <!--分享-->
+                     <view class="share">
+                        <text>分享</text>
+                     </view>
+                  </view>
+               </view>
+            </view>
+         </view>
+      </scroll-view>
+      </block>
+
+
+</tabs>
+<!--tabs结束-->

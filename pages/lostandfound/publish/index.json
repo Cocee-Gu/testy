@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-divider": "dist/divider/index",
+    "van-icon": "dist/icon/index",
+    "van-datetime-picker": "dist/datetime-picker/index"
+  },
+  "navigationBarTitleText": "发布信息"
+}

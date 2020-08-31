@@ -1,0 +1,30 @@
+.tabs .title {
+  background-color: #284352;
+  display: flex;
+  flex: 1;
+  color: white;
+}
+.tabs .title .title_item {
+  padding: 20rpx 0;
+  display: flex;
+  width: 33.3%;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 9rpx;
+  margin-bottom: 25rpx;
+}
+.tabs .title .active {
+  position: relative;
+  align-items: center;
+}
+.tabs .title .active:after {
+  color: white;
+  border-bottom: 5rpx solid white ;
+  content: "";
+  position: absolute;
+  width: 80rpx;
+  height: 0.5rpx;
+  left: 50%;
+  bottom: -3rpx;
+  transform: translateX(-50%);
+}

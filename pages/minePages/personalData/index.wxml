@@ -1,0 +1,77 @@
+<!--pages/minePages/personalData/index.wxml-->
+<view class="title">基本信息</view>
+
+<view class="userInformation">
+  <view class="item">
+    <view class="lable">头像</view>
+    <view class="detail">
+      <image src="/image/mine-tx.png"></image>
+    </view>
+  </view>
+  <view class="item">
+    <view class="lable">昵称</view>
+    <view class="detail">
+      <input placeholder="fsd"></input>
+    </view>
+  </view>
+  <view class="item">
+    <view class="lable">姓名</view>
+    <view class="detail">
+      <input placeholder="请输入姓名（选填）"></input>
+    </view>
+  </view>
+  <view class="item">
+    <view class="lable">性别</view>
+    <view class="detail">
+      <input placeholder="fsd"></input>
+    </view>
+  </view>
+  <view class="item">
+    <view class="lable">邮箱</view>
+    <view class="detail">
+      <input placeholder="请输入邮箱（选填）"></input>
+    </view>
+  </view>
+  <view class="item">
+    <view class="lable">微信号</view>
+    <view class="detail">
+      <input placeholder="请输入微信号（选填）"></input>
+    </view>
+  </view>
+</view>
+
+<view class="certification">
+
+  <view class="title">学生信息</view>
+
+  <view class="studentCertification">
+    <view>请前往认证界面进行认证 ☛</view>
+  </view>
+
+  <view class="title">教职工信息</view>
+
+  <view class="studentInfoDetail">
+    <view class="item">
+      <view class="lable">年级</view>
+      <view>fasdf</view>
+    </view>
+    <view class="item">
+      <view class="lable">专业</view>
+      <view></view>
+    </view>
+    <view class="item">
+      <view class="lable">班级</view>
+      <view></view>
+    </view>
+  </view>
+
+  <!-- <view class="studentCertification">
+    <view>请前往认证界面进行认证 ☛</view>
+  </view> -->
+
+  <view class="btn">
+    <view>保存</view>
+  </view>
+
+</view>
+

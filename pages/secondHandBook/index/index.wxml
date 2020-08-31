@@ -1,0 +1,83 @@
+<!-- pages/SHB/index/index.wxml -->
+<!-- 搜索框开始 -->
+<view class="search_body">
+    <view class="search_background"></view>
+    <view class="search_box">
+        <input class="search" type="text" placeholder="搜索" placeholder-style="text-align:center;color:#Cacaca;font-size:36rpx" bindconfirm="searchBook"/>
+    </view>
+</view> 
+<!-- 搜索框结束 -->
+<!-- 轮播图开始 -->
+<view class="carousel_box">
+    <swiper next-margin="138rpx" previous-margin="138rpx" indicator-dots="true" autoplay="true" indicator-color="#bebebe" indicator-active-color="#3D6277" interval="2500" bindchange="change" class="carousel_body" circular="true">
+        <swiper-item class="swiper_item" style="" wx:for="{{swiper_index}}" wx:key="index">
+            <image class="swiper_image" src="{{item.img}}" style="height:{{index==carouselIndex?'83%':''}};width:{{index==carouselIndex?'100%':''}};transform:{{index==carouselIndex?'translateY(0)':'translateY(-10rpx)'}}" />
+        </swiper-item>
+    </swiper>
+</view>
+<!-- 轮播图结束 -->
+<!-- 顶部粘性布局导航开始 -->
+<view class="nav_box">
+    <view data-index="0" bindtap="changeChoose" class="buy nav_item1  {{isBuy?'choose':''}}">
+        买书
+    </view>
+    <view class="nav_item"></view>
+    <view data-index="1" bindtap="changeChoose" class="borrow nav_item2 {{isBuy?'':'choose'}}">
+        借阅
+    </view>
+    <view class="nav_bottom choose_bottom" style="{{isBuy?'':'transform: translate(418rpx, 78rpx)'}}"></view>
+</view>
+<!-- 顶部粘性布局导航结束 -->
+<!-- 买书推荐开始 -->
+<view class="buy_box" wx:key="index" wx:for="{{booksArr}}">
+    <book_recommend booksArr="{{item}}"></book_recommend>
+</view>
+<!-- 买书推荐结束 -->
+<!-- 借阅推荐开始 -->
+<!-- 借阅推荐结束 -->
+<!-- 底部粘性布局开始 -->
+<view class="stick_bottom">
+    <view wx:if="{{isShow_by_isn}}">
+        <form>
+            <view class="input_by_isn">
+                <input type="text" placeholder="输入ISN码" placeholder-style="color:#fff;font-size:32rpx" bindinput="updateISN"/>
+                <view class="ensure">
+                  <view bindtap="searchISN">确认</view>
+                </view>
+            </view> 
+        </form>
+    </view>
+    <view class="input_isn_error" wx:if="{{isShow_isn_error}}">
+        <form>
+            <view>
+                <label style="margin-top:28rpx">书名</label>
+                <input type="text" />
+            </view>
+            <view style="margin-top:50rpx">
+                <label>作者</label>
+                <input type="text" />
+            </view>
+            <view style="margin-top:50rpx">
+                <label>出版社</label>
+                <input type="text" />
+            </view>
+            <view style="margin-top:50rpx">
+                <label>新旧程度</label>
+                <input type="text" />
+            </view>
+            <view style="margin-top:50rpx">
+                <label>描述</label>
+                <input type="text" />
+            </view>
+            <button class="submit" type="button">发布</button>
+        </form>
+    </view>
+    <view bindtap="quit" class="by_hand_box" wx:if="{{isShow_back}}" style="background-color:{{isShow_hand?'rgba(235, 241, 245, 0)':'rgba(235, 241, 245, 0.54)'}};">
+        <view class="by_isn" catchtap="by_isn" wx:if="{{isShow_hand}}">输入ISN码</view>
+        <view class="isn_error" catchtap="isn_error" wx:if="{{isShow_hand}}">ISN码损坏</view>
+    </view>
+    <view class="scan_code">扫码卖书</view>
+    <view class="input_hand" bindtap="input_hand">手动输入</view>
+</view>
+<import src="/pages/secondHandBook/tabbar_template/index.wxml" />
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />

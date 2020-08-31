@@ -1,0 +1,130 @@
+/* pages/secondHandBook/publishBook/index.wxss */
+page {
+  background-color:rgba(235, 241, 245, 0.8);
+  color: rgba(39, 61, 73, 1);
+}
+
+.book-container {
+  width: 93%;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  margin-top: 30rpx;
+  background-color: #fff; 
+  border-radius: 12rpx;
+}
+
+.book-container .book-detail {
+  display: flex;
+  width: 91%;
+  margin: 30rpx auto;
+}
+
+.book-container image {
+  width: 220rpx;
+  height: 290rpx;
+  margin-right: 26rpx;
+  border-radius: 16rpx;
+  box-shadow: 0 6rpx 12rpx rgba(3, 86, 80, 0.1);
+}
+
+.book-container .title {
+  font-size: 38rpx;
+  margin-bottom: 10rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.book-container .item {
+  height: 44rpx;
+  font-size: 28rpx;
+}
+
+/* .book-container .book-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width: 91%;
+  margin: auto;
+  margin-bottom: 20rpx;
+  margin-top: 16rpx;
+  font-size: 28 rpx;
+} */
+
+.person-idea {
+  width: 93%;
+  display: flex;
+  margin: auto;
+  margin-top: 30rpx;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 12rpx;
+}
+
+.person-idea .item {
+  width: 93%;
+  display: flex;
+  margin: auto;
+}
+
+.person-idea .item {
+  height: 90rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.person-idea .item:not(:first-child) {
+  border-top: 2rpx solid #eee;
+}
+
+.person-idea .item:first-child {
+  margin-top: 20rpx;
+}
+
+.person-idea .item:last-child {
+  margin-bottom: 20rpx;
+}
+
+.person-idea .lable {
+  margin: auto;
+  margin-left: 20rpx;
+}
+
+.person-idea .input {
+  margin: auto 30rpx;
+  width: 320rpx;
+}
+
+.person-idea input {
+  width: 320rpx;
+  margin-right: 0;
+}
+
+.person-idea .input radio-group {
+  width: 320rpx;
+}
+
+
+/* 导入课程按钮 */
+.ensure{
+  display: flex;
+  justify-content: center;
+  margin-top: 60rpx;
+  margin-bottom: 100rpx;
+}
+
+.ensure-button{
+  width: 300rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 30rpx;
+  text-align: center;
+  background: #035650;
+  color: #fff;
+  font-size: 18px;
+  font-family: Arial;
+}

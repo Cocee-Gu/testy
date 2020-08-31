@@ -1,0 +1,280 @@
+page {
+  background-color: rgba(235, 241, 245, 0.54);
+  margin-top: 0;
+  height: 100%;
+}
+.up1 {
+  height: calc(100vh - 100rpx);
+}
+.up1 .area .message {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50rpx;
+}
+.up1 .area .message .tx {
+  margin-left: 42rpx;
+  display: flex;
+}
+.up1 .area .message .tx image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  box-shadow: 0px 6px 12px #ececec;
+}
+.up1 .area .message .tx .name {
+  display: flex;
+  font-size: 36rpx;
+  font-weight: Regular;
+  font-family: Microsoft YaHei;
+  align-items: center;
+  margin-left: 30rpx;
+  color: #6A7175;
+}
+.up1 .area .message .sd {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  margin-right: 47rpx;
+}
+.up1 .area .message .sd .select {
+  font-weight: bold;
+  font-size: 36rpx;
+  font-weight: Regular;
+  font-family: Microsoft YaHei;
+  margin-top: 4rpx;
+}
+.up1 .area .message .sd .date {
+  display: flex;
+  color: #969ca0;
+  font-size: 30rpx;
+  font-weight: Regular;
+  font-family: Microsoft YaHei;
+  margin-top: 9rpx;
+}
+.up1 .area .content {
+  margin-left: 142rpx;
+  margin-top: 15rpx;
+  color: #969ca0;
+  font-size: 30rpx;
+  font-weight: Regular;
+  font-family: Microsoft YaHei;
+}
+.up1 .area .icon {
+  display: flex;
+  float: left;
+  width: 100%;
+  margin-top: 55rpx;
+}
+.up1 .area .icon .collect {
+  display: flex;
+  align-items: center;
+  margin-left: 142rpx;
+  color: #c0bfbf;
+}
+.up1 .area .icon .collect .num {
+  margin-left: 10rpx;
+  color: #B0B0B0;
+  font-weight: Regular;
+  font-family: Arial;
+}
+.up1 .area .icon .pinglun {
+  display: flex;
+  align-items: center;
+  margin-left: 144rpx;
+  color: #c0bfbf;
+}
+.up1 .area .icon .pinglun .num {
+  color: #B0B0B0;
+  font-weight: Regular;
+  font-family: Arial;
+  margin-left: 10rpx;
+}
+.up1 .area .icon .send {
+  display: flex;
+  align-items: center;
+  margin-left: 144rpx;
+  color: #c0bfbf;
+}
+.up1 .area .icon .send .num {
+  color: #B0B0B0;
+  font-weight: Regular;
+  font-family: Arial;
+  margin-left: 10rpx;
+}
+.up1 .line {
+  border: 1rpx solid #DCDCDC;
+  margin-top: 135rpx;
+  margin-left: 142rpx;
+}
+.up2 {
+  position: fixed;
+}
+.up2 .up2-1 {
+  height: calc(100vh - 50rpx);
+}
+.up2 .up2-1 .second {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60rpx;
+}
+.up2 .up2-1 .second .tp {
+  display: flex;
+}
+.up2 .up2-1 .second .tp image {
+  height: 200rpx;
+  width: 140rpx;
+  margin-left: 51rpx;
+  border-radius: 6rpx;
+  box-shadow: 0px 6px 12px #bbc1c4;
+}
+.up2 .up2-1 .second .tp .message {
+  margin-left: 38rpx;
+}
+.up2 .up2-1 .second .tp .message .name {
+  margin-top: 17rpx;
+  color: #56798D;
+  font-size: 38rpx;
+  font-weight: Regular;
+  font-family: PingFang SC;
+}
+.up2 .up2-1 .second .tp .message .cbs {
+  color: #BDBDBD;
+  font-size: 35rpx;
+  margin-top: 17rpx;
+  font-weight: Regular;
+  font-family: PingFang SC;
+}
+.up2 .up2-1 .second .tp .message .price {
+  color: #4D6F82;
+  font-size: 31rpx;
+  margin-top: 16rpx;
+  font-weight: Regular;
+  font-family: PingFang SC;
+}
+.up2 .up2-1 .second .new {
+  border: 1rpx solid  white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: Regular;
+  font-family: PingFang SC;
+  color: #224457;
+  margin-right: 52rpx;
+  height: 75rpx;
+  width: 180rpx;
+  margin-top: 62.5rpx;
+  border-radius: 25rpx;
+  font-size: 33rpx;
+  background-color: white;
+  box-shadow: 0px 2px 6px 1px #cac9c9;
+}
+.up2 .up2-1 .linetwo {
+  border: 1rpx solid #DCDCDC;
+  margin-top: 27rpx;
+  margin-left: 212rpx;
+}
+.up3 {
+  height: calc(100vh - 100rpx);
+}
+.up3 .third {
+  border: 1rpx solid #FFFFFF;
+  background-color: #FFFFFF;
+  border-radius: 16rpx;
+  box-shadow: 0px 6px 9px #dee0e0;
+  height: 473rpx;
+  width: 90%;
+  margin: 40rpx auto;
+}
+.up3 .third .information {
+  display: flex;
+  justify-content: space-between;
+  height: 140rpx;
+  align-items: center;
+}
+.up3 .third .information .name {
+  margin-left: 30rpx;
+  font-size: 40rpx;
+  color: #3A5666;
+  font-weight: Regular;
+  font-family: PingFang SC;
+}
+.up3 .third .information .date {
+  font-weight: Regular;
+  font-family: Microsoft YaHei;
+  margin-right: 30rpx;
+  font-size: 30rpx;
+  color: #6A7175;
+}
+.up3 .third .img {
+  display: flex;
+}
+.up3 .third .img image {
+  height: 180rpx;
+  width: 160rpx;
+  margin: auto;
+  border-radius: 10rpx;
+  box-shadow: 0px 6px 9px #cfd2d3;
+}
+.up3 .third .butt {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60rpx;
+}
+.up3 .third .butt .miss1 {
+  display: flex;
+  margin-left: 30rpx;
+  height: 60rpx;
+  width: 112rpx;
+  align-items: center;
+  justify-content: center;
+  border-radius: 350rpx;
+  color: #FFFFFF;
+  background-color: #FF893A;
+  font-weight: Regular;
+  font-family: Microsoft YaHei;
+  font-size: 30rpx;
+  box-shadow: 0px 6px 10px #f0f1f1;
+}
+.up3 .third .butt .miss2 {
+  display: flex;
+  margin-left: 30rpx;
+  height: 60rpx;
+  width: 112rpx;
+  align-items: center;
+  justify-content: center;
+  border-radius: 350rpx;
+  color: #FFFFFF;
+  background-color: #F7BC34;
+  font-weight: Regular;
+  font-family: Microsoft YaHei;
+  font-size: 30rpx;
+  box-shadow: 0px 6px 10px #f0f1f1;
+}
+.up3 .third .butt .wf {
+  margin-right: 30rpx;
+  display: flex;
+}
+.up3 .third .butt .wf .end {
+  display: flex;
+  border: 1rpx solid #FFFFFF;
+  width: 150rpx;
+  align-items: center;
+  justify-content: center;
+  font-weight: Regular;
+  font-family: Microsoft YaHei;
+  color: #3D6277;
+  background-color: #FFFFFF;
+  margin-right: 10rpx;
+  box-shadow: 0px 6px 10px #f0f1f1;
+}
+.up3 .third .butt .wf .share {
+  display: flex;
+  width: 150rpx;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: Regular;
+  font-family: Microsoft YaHei;
+  background-color: #3D6277;
+  box-shadow: 0px 1.5px 1px 1px #f0efef;
+}

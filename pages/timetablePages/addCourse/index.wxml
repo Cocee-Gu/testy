@@ -1,0 +1,67 @@
+<!--pages/timetablePages/addCourse/index.wxml-->
+<view class="add-class-container">
+  <view class="add-class-space"></view>
+
+  <view class="detail-row">
+    <view class="add-class-detail">
+      <view class="item">
+        <view class="lable">课程</view>
+        <input placeholder="课程名称" placeholder-style="color: rgba(110,110,110,.72)" value="{{course_name}}" bindinput="updata" data-index="01"></input>
+      </view>
+      <view class="br"></view>
+      <view class="item">
+        <view class="lable">老师</view>
+        <input placeholder="教师姓名" placeholder-style="color: rgba(110,110,110,.72)" value="{{course_teacher}}" bindinput="updata" data-index="02"></input>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="add-class-container">
+  <view class="add-class-space"></view>
+
+  <view class="detail-row">
+    <view class="add-class-detail">
+      <view class="item">
+        <view class="lable">周数</view>
+          <picker mode="multiSelector" bindchange="bindMultiPickerChange1" value="{{multiIndex1}}" range="{{multiArray1}}">
+            <input placeholder="第1~2周，每周" placeholder-style="color: rgba(110,110,110,.72)" value="{{multiArray1[0][multiIndex1[0]] + '-' + multiArray1[1][multiIndex1[1]]}}" disabled></input>
+          </picker>
+      </view>
+      <view class="br"></view>
+      <view class="item">
+        <view class="lable">节数</view>
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
+          <input placeholder="第1~2节课" placeholder-style="color: rgba(110,110,110,.72)" value="{{multiArray[0][multiIndex[0]] + '-' + multiArray[1][multiIndex[1]]}}" disabled></input>
+        </picker>
+      </view>
+      <view class="br"></view>
+      <view class="item">
+        <view class="lable">周几</view>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <input placeholder="周一" placeholder-style="color: rgba(110,110,110,.72)" value="{{array[index]}}" disabled></input>
+        </picker>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="add-class-container">
+  <view class="add-class-space"></view>
+
+  <view class="detail-row">
+    <view class="add-class-detail">
+      <view class="item">
+        <view class="lable">教室</view>
+        <input placeholder="教室编号" placeholder-style="color: rgba(110,110,110,.72)" value="{{course_room}}" bindinput="updata" data-index="03"></input>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="btn-row">
+  <view class="btn" bindtap="ensure">
+    添加
+  </view>
+</view>

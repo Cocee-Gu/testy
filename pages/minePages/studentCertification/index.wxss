@@ -1,0 +1,103 @@
+/* pages/minePages/studentCertification/index.wxss */
+page {
+  background-color:rgba(235, 241, 245, 0.8);
+}
+
+/* 主要区域 */
+.import-detail-contailer{
+  margin-top: 200rpx;
+  padding: 0 48rpx;
+  color: rgba(39, 61, 73, 1);
+}
+
+.import-detail-main{
+  box-shadow: 0 6rpx 12rpx rgba(61, 98, 119, 0.6);
+  border-radius: 10rpx;
+  padding: 0 40rpx;
+  background-color: #fff;
+}
+
+.br{
+  border-top: 2rpx solid rgba(204, 204, 204,.6);
+}
+
+.item{
+  height: 110rpx;
+  line-height: 110rpx;
+  display: flex;
+}
+
+.lable{
+  color: #035650;
+  width: 100rpx;
+  margin-left: 15rpx;
+}
+
+.input{
+  /* color: rgba(110, 110, 110,.72); */
+}
+
+.input input{
+  margin-top: 15rpx;
+  height: 80rpx;
+}
+
+/* 学期样式 */
+.semester{
+  display: flex;
+  width: 100%;
+  margin-left: 18rpx;
+  justify-content: space-between;
+}
+
+.semester i-icon{
+  color: rgba(110, 110, 110,.72);
+}
+
+/* 验证码 */
+.item-img{
+  height: 130rpx;
+  line-height: 130rpx;
+  display: flex;
+}
+
+.image{
+  display: flex;
+}
+
+.lable-img{
+  color: #035650;
+  width: 140rpx;
+}
+
+.image image{
+  width: 200rpx;
+  height: 80rpx;
+  margin-top: 25rpx;
+}
+
+.image input{
+  margin-top: 25rpx;
+  height: 80rpx;
+}
+
+
+/* 导入课程按钮 */
+.ensure{
+  margin-top: 180rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.ensure-button{
+  width: 300rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 30rpx;
+  text-align: center;
+  background: #035650;
+  color: #fff;
+  font-size: 18px;
+  font-family: Arial;
+}

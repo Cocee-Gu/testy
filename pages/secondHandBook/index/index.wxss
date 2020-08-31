@@ -1,0 +1,252 @@
+/* pages/SHB/index/index.wxss */
+page {
+  background-color: rgba(235, 241, 245, 0.54);
+}
+/* 搜索部分 */
+.search_body {
+  width: 100%; 
+  height: 136rpx;
+  /* 搜索框 */
+}
+.search_body .search_background {
+  width: 100%;
+  height: 68rpx;
+  background-color: #284352;
+  position: absolute;
+  z-index: -1;
+  border-radius: 0 0 4rpx 4rpx;
+  box-shadow: 0 6rpx 12rpx rgba(61, 98, 119, 0.36);
+}
+.search_body .search_box {
+  width: 80%;
+  margin-left: 10%;
+  background-color: rgba(255, 255, 255, 0.98);
+  border-radius: 10rpx;
+  display: flex;
+  transform: translateY(20rpx);
+  box-shadow: 0 6rpx 12rpx rgba(61, 98, 119, 0.75);
+}
+.search_body .search_box .search {
+  height: 88rpx;
+  width: 90%;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  text-align: center;
+}
+/* 轮播图部分 */
+/* 轮播图部分 */
+.carousel_box {
+  position: relative;
+  height: 344rpx;
+  width: 100vw;
+}
+.carousel_box swiper {
+  height: 100%;
+}
+.carousel_box swiper .swiper_item {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+}
+.carousel_box swiper .swiper_item .swiper_image {
+  transition: all 0.5s;
+  transform: translateY(10rpx);
+  width: 464rpx;
+  height: 260rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+}
+/* 买书/借阅导航部分 */
+.nav_box {
+  background-color: #f4f7fa;
+  position: sticky;
+  top: 0px;
+  z-index: 9;
+  font-size: 32rpx;
+  height: 88rpx;
+  width: 730rpx;
+  color: #b5b5b5;
+  margin: 0 auto;
+  /* 选中是改变字体颜色 */
+}
+.nav_box .choose {
+  color: #3d6277;
+}
+.nav_box .nav_item1 {
+  margin: 0 auto;
+  float: left;
+  width: 318rpx;
+  text-align: right;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+.nav_box .nav_item2 {
+  margin: 0 auto;
+  float: right;
+  width: 318rpx;
+  text-align: left;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding-left: 28rpx;
+}
+.nav_box .nav_bottom {
+  width: 50rpx;
+  height: 4rpx;
+  transition: all 0.3s;
+  background-color: #3d6277;
+  transform: translate(260rpx, 76rpx);
+}
+/* 底部输入 */
+.stick_bottom {
+  position: sticky;
+  bottom: 0;
+  z-index: 9;
+  font-size: 36rpx;
+  margin: 0 auto;
+}
+.stick_bottom .input_by_isn {
+  position: absolute;
+  height: 300rpx;
+  width: 448rpx;
+  background-color: #3d6277;
+  opacity: 0.92;
+  border-radius: 40rpx;
+  color: #fff;
+  transform: translate(160rpx, -800rpx);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.stick_bottom .input_by_isn input {
+  text-align: center;
+  margin: auto;
+  width: 320rpx;
+  border-bottom: 2rpx dotted #ddd;
+  margin-bottom: 6rpx;
+}
+
+.stick_bottom .input_by_isn .ensure {
+  display: flex;
+  margin: auto;
+}
+
+.stick_bottom .input_by_isn .ensure view {
+  width: 200rpx;
+  height: 76rpx;
+  margin: auto;
+  font-size: 40rpx;
+  text-align: center;
+  letter-spacing: 4rpx;
+  background-color: #fff;
+  color: #3d6277;
+  box-shadow: 0 6rpx 12rpx #3d6277;
+  border-radius: 10rpx;
+  line-height: 76rpx;
+  margin-top: 0;
+  margin-bottom: -30rpx;
+}
+
+.stick_bottom .input_isn_error {
+  position: absolute;
+  height: 658rpx;
+  width: 538rpx;
+  background-color: rgba(61, 98, 119, 0.92);
+  color: #fff;
+  transform: translate(112rpx, -1000rpx);
+  border-radius: 40rpx;
+}
+.stick_bottom .input_isn_error view {
+  width: 100%;
+  font-size: 32rpx;
+}
+.stick_bottom .input_isn_error view label {
+  margin-left: 28rpx;
+  display: inline-block;
+  width: 150rpx;
+}
+.stick_bottom .input_isn_error view input {
+  border-bottom: 2rpx dotted #ddd;
+  width: 276rpx;
+  display: inline-block;
+  transform: translateY(10rpx);
+}
+.stick_bottom .input_isn_error .submit {
+  height: 76rpx;
+  width: 234rpx;
+  background-color: #fff;
+  color: #3d6277;
+  font-size: 40rpx;
+  border-radius: 10rpx;
+  margin: 66rpx auto;
+  text-align: center;
+  line-height: 76rpx;
+}
+.stick_bottom .scan_code {
+  position: absolute;
+  width: 226rpx;
+  height: 92rpx;
+  text-align: center;
+  line-height: 92rpx;
+  background-color: #284352;
+  color: #fff;
+  opacity: 0.87;
+  float: left;
+  box-shadow: 0 6rpx 12rpx rgba(0, 0, 0, 0.16);
+  bottom: 134rpx;
+  left: 120rpx;
+}
+.stick_bottom .input_hand {
+  position: absolute;
+  width: 218rpx;
+  height: 86rpx;
+  text-align: center;
+  line-height: 92rpx;
+  background-color: #fff;
+  color: #284352;
+  opacity: 0.87;
+  float: right;
+  box-sizing: content-box;
+  border: 4rpx dotted rgba(61, 98, 119, 0.92);
+  box-shadow: 0 6rpx 12rpx rgba(0, 0, 0, 0.16);
+  bottom: 134rpx;
+  right: 120rpx;
+}
+.stick_bottom .by_isn {
+  position: absolute;
+  right: 138rpx;
+  bottom: 350rpx;
+  height: 80rpx;
+  width: 194rpx;
+  z-index: 10;
+  font-size: 32rpx;
+  color: #fff;
+  border-radius: 40rpx;
+  background-color: #284352;
+  opacity: 0.57;
+  text-align: center;
+  line-height: 80rpx;
+  box-shadow: 0 6rpx 12rpx #000;
+}
+.stick_bottom .isn_error {
+  position: absolute;
+  right: 138rpx;
+  bottom: 250rpx;
+  height: 80rpx;
+  width: 194rpx;
+  font-size: 32rpx;
+  color: #fff;
+  border-radius: 40rpx;
+  background-color: #284352;
+  opacity: 0.57;
+  text-align: center;
+  line-height: 80rpx;
+  box-shadow: 0 6rpx 12rpx #000;
+  z-index: 0;
+}
+.by_hand_box {
+  height: 100vh;
+  width: 100vw;
+  z-index: -100;
+  position: absolute;
+  transform: translateY(-100vh);
+}

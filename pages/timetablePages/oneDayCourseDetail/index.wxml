@@ -1,0 +1,36 @@
+<!--pages/timetablePages/oneDayCourseDetail/index.wxml-->
+<view class="space"></view>
+<view style="display:{{course.length == 0? '':'none'}}" class="text">We have no class today!</view>
+<view class="course-container" wx:for="{{course}}" wx:key="index" >
+  <view class="course-row">
+    <view class="box-shaow">
+      <view class="course-title">
+        <text>{{item.courseName}}</text>
+      </view>
+      <view class="course-main">
+        <view class="course-item">
+          <view class="lable">老师</view>
+          <view class="detail">{{item.courseTeacher}}</view>
+        </view>
+        <view class="br"></view>
+        <view class="course-item">
+          <view class="lable">地点</view>
+          <view class="detail">{{item.courseRoom=="" ? 'NULL' : item.courseRoom}}</view>
+        </view>
+        <view class="br"></view>
+        <view class="course-item">
+          <view class="lable">周次</view>
+          <view class="detail">第{{item.courseWeeks}}周</view>
+        </view>
+        <view class="br"></view>
+        <view class="course-item">
+          <view class="lable">时间</view>
+          <view class="detail">周{{item.courseDays}}{{item.courseStart}}~{{item.courseEnd}}节</view>
+        </view>
+      </view>
+    </view>
+    <view class="course-space"></view>
+  </view>
+</view>
+
+<view class="space"></view>

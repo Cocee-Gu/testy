@@ -1,0 +1,74 @@
+/* pages/timetablePages/addCourse/index.wxss */
+page {
+  background-color:rgba(235, 241, 245, 0.8);
+}
+.add-class-container{
+  /* height: 270rpx; */
+  font-size: 14px;
+}
+
+.add-class-space{
+  height: 64rpx;
+}
+
+.detail-row{
+  /* height: 204rpx; */
+  display: flex;
+  justify-content: center;
+}
+
+.add-class-detail{
+  /* height: 206rpx; */
+  width: 654rpx;
+  box-shadow: 0 6rpx 12rpx rgba(61, 98, 119, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10rpx;
+  background-color: #fff;
+  font-size: 32rpx;
+}
+
+.item{
+  display: flex;
+  height: 102rpx;
+  line-height: 102rpx;
+  color: rgba(39, 61, 73, 1);
+}
+
+.lable{
+  margin-left: 11%;
+  width: 130rpx;
+}
+
+input{
+  padding-top: 32rpx;
+  padding-left: 40rpx;
+}
+
+.br{
+  width: 85%;
+  margin-left: 7.5%;
+  border-top: 2rpx solid rgba(204, 204, 204,.6);
+}
+
+
+/* 添加按钮 */
+.btn-row{
+  margin-top: 100rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.btn{
+  width: 200rpx;
+  height: 88rpx;
+  background-color: rgba(39, 61, 73, 1);
+  color: white;
+  border-radius: 20rpx;
+  text-align: center;
+  align-items: center;
+  line-height: 88rpx;
+  box-shadow: 0 0 12rpx rgba(204, 204, 204,.6);
+  font-size: 40rpx;
+}

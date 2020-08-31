@@ -1,0 +1,21 @@
+<!--个人信息开始-->
+<view class="message">
+    
+    <view class="first">
+      <image bindtap='' src="/image/secondHandBook_image/shb_mine_tx.png" />
+      <view class="name">
+        <text>刘芬芬</text>
+      </view>
+    </view> 
+    
+    <view class="second">
+      <view class="confirm">
+        身份信息认证
+      </view>
+      <view class="reconfirm">
+       未认证
+      </view>  
+      <image bindtap='' class="arrow" src="/image/secondHandBook_image/shb_arrows.png"></image> 
+    </view>
+  </view>
+  <!--个人信息结束-->

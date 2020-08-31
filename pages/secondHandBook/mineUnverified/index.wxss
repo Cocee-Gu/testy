@@ -1,0 +1,52 @@
+page {
+  background: #EBF1F5;
+}
+/*个人信息*/
+.message {
+  background-color: #fffefe;
+  border: 1rpx solid #fffefe;
+  height: 388rpx;
+  width: 694rpx;
+  margin: auto;
+  margin-top: 100rpx;
+  border-radius: 10rpx;
+  box-shadow: 0rpx 6rpx 12rpx #9FA7AC;
+}
+.message .first {
+  display: flex;
+  flex: 1;
+  padding-left: 66rpx;
+  margin-top: 70rpx;
+}
+.message .first image {
+  height: 176rpx;
+  width: 176rpx;
+  border-radius: 10rpx;
+}
+.message .first .name {
+  display: flex;
+  margin-left: 260rpx;
+  align-items: center;
+  color: #284352;
+  font-size: 44rpx;
+}
+.message .second {
+  display: flex;
+  padding-left: 30rpx;
+  margin-top: 46rpx;
+}
+.message .second .confirm {
+  color: #284352;
+  font-size: 36rpx;
+}
+.message .second .reconfirm {
+  color: #727272;
+  font-size: 36rpx;
+  margin-left: 230rpx;
+}
+.message .second .arrow {
+  width: 32rpx;
+  height: 32rpx;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}

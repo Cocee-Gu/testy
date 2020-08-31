@@ -1,0 +1,7 @@
+<!-- 此组件用于二手图书中首页推荐的买书/借阅的部分 -->
+<view class="books_box">
+    <image class="book_image" src="{{booksArr.img}}" />
+    <view class="book_name">{{booksArr.name}} {{booksArr.author}}</view>
+    <view class="book_inf">{{booksArr.inf}}</view>
+    <view class="book_new">{{booksArr.new}}</view>
+</view>

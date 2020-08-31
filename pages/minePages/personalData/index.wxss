@@ -1,0 +1,132 @@
+/* pages/minePages/personalData/index.wxss */
+page {
+  background-color:rgba(235, 241, 245, 0.8);
+}
+
+.title {
+  height: 110rpx;
+  width: 93%;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  font-size: 34rpx;
+}
+
+.userInformation {
+  width: 93%;
+  border-radius: 24rpx;
+  display: flex;
+  margin: auto;
+  background-color: #fff;
+  flex-direction: column;
+  box-shadow: 0 6rpx 12rpx rgba(159, 167, 172, 1);
+}
+
+.userInformation .item {
+  width: 93%;
+  display: flex;
+  margin: auto;
+  height: 90rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.userInformation .item:first-child {
+  height: 120rpx !important;
+}
+
+.userInformation .item:first-child image {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+
+.userInformation .item:not(:last-child) {
+  border-bottom: 2rpx solid rgba(221, 221, 221, 0.445);
+}
+
+.userInformation .item .lable{
+  margin-left: 20rpx;
+}
+
+.certification {
+  margin-bottom: 100rpx;
+}
+
+.userInformation .item input{
+  margin-right: 20rpx;
+  text-align: right;
+}
+
+
+.studentCertification {
+  height: 150rpx;
+  width: 93%;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  background-color: rgba(205, 205, 206, 0.6);
+  border-radius: 30rpx;
+  box-shadow: 0 6rpx 12rpx rgba(159, 167, 172, 0.897);
+}
+
+.studentCertification view {
+  display: flex;
+  margin: auto;
+  font-size: 36rpx;
+  color: #333;
+  letter-spacing: 4rpx;
+}
+
+.studentInfoDetail {
+  width: 93%;
+  border-radius: 24rpx;
+  display: flex;
+  margin: auto;
+  background-color: #fff;
+  flex-direction: column;
+  box-shadow: 0 6rpx 12rpx rgba(159, 167, 172, 1);
+}
+
+.studentInfoDetail .item {
+  width: 93%;
+  display: flex;
+  margin: auto;
+  height: 90rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.studentInfoDetail .item:not(:first-child) {
+  border-top: 2rpx solid rgba(221, 221, 221, 0.445);
+}
+
+.studentInfoDetail .lable {
+  margin-left: 20rpx;
+}
+
+.studentInfoDetail .item view:last-child{
+  margin-right: 20rpx;
+}
+
+
+.btn {
+  width: 92%;
+  display: flex;
+  margin: auto;
+  margin-top: 70rpx;
+  align-items: center;
+  border-radius: 50rpx;
+  height: 80rpx;
+  background-color: #035650;
+  color: #fff;
+}
+
+.btn view {
+  display: flex;
+  margin: auto;
+  letter-spacing: 8rpx;
+  font-size: 36rpx;
+  font-weight: 550;
+}

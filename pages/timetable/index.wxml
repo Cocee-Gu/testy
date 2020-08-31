@@ -1,0 +1,255 @@
+<!--pages/timetable/index.wxml-->
+
+<!-- 主要内容区域 -->
+<view class="{{isHidden ? 'pageShow':'pageHide'}}">
+  <!-- navagationBar --> 
+  <view class='{{isFix?"pageShow":"pageHide"}} page' style="{{'height:'+navigationBarAndStatusBarHeight}}">
+    <view class="navigation-container" style="{{'height:'+navigationBarAndStatusBarHeight}}">
+      <!-- 状态栏 -->
+      <view class="statusBar" style="{{'height:'+statusBarHeight}}"></view>
+
+      <!-- 导航栏 -->
+      <view class="navigation-bar" style="{{'height:'+navigationBarHeight}}">
+        <view class="navigation-buttons" style="{{'height:' + menuButtonHeight}}">
+          <view class="navigation-week" bindtap="mainSetting">
+            <view>第{{week_num == "" ? null : week_num}}1周</view>
+            <i-icon type="enter" size="18"/>
+          </view>
+          <view class="navigation-switch">
+            <view bindtap="switchCourseOrSchedule" data-index="0" class="{{isCourseOrSchedule ? '' : 'hover'}}">课程</view>
+            <view bindtap="switchCourseOrSchedule" data-index="1" class="{{!isCourseOrSchedule ? '' : 'hover'}}">日程</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 主题内容显示区域 -->
+  <view>
+
+    <view class="course" wx:if="{{isCourseOrSchedule}}">
+      <!-- 课程 -->
+      <view class="class-container" style="{{'background-image:url('+bg +');'}}">
+        <!-- 课表的月和周显示 -->
+        <view class="class-week">
+          <view class="class-month">{{month}}月</view>
+          <view class="class-day" wx:for="{{week}}" wx:key="index" catchtap="pageNavigation" data-day="{{index+1}}" data-index="04">
+            <view>{{item}}</view>
+            <view>{{monday+index}}日</view>
+          </view>
+        </view>
+
+        <!-- 课程表显示的时间 -->
+        <view class="class-main">
+
+          <!-- 课表的时间列 -->
+          <view class="class-index">
+            <view class="class-index-item" wx:for="{{time}}" wx:key="index">
+              <view class="class-index-item-index">
+                {{item}}
+              </view>
+            </view>
+          </view>
+          <!-- 课表的下画横线 -->
+          <view wx:for="{{time}}" wx:key="index">
+            <view style="width:676rpx;margin-top:{{(index+1)*120}}rpx;  position: absolute;border-bottom:1rpx solid rgba(40, 67, 82, 0.1);">
+            </view>
+          </view>
+          <!--课表内容详情-->
+          <view wx:for="{{class}}" wx:key="index">
+            <view class="flex-item kcb-item" bindtap="showCardView" data-statu="open" data-index="{{index}}" style="margin-left:{{(item.day-1)*95 + 8}}rpx;margin-top:{{(item.course_time-1)*120+10}}rpx;height:{{item.course_len*120-20}}rpx;background-color:{{colorArrays[index%5]}}">
+              <view class="smalltext" style="{{'-webkit-line-clamp: ' + item.course_len * 3 }}">{{item.course_name}}@{{item.course_room}}</view>
+            </view>
+          </view>
+
+        </view>
+
+        <!-- 添加课程的按钮 -->
+        <view class="add-icon">
+          <view class="add-icon-i" bindtap="pageNavigation" data-index="01">
+            <i-icon type="add" color="#ffffff" size="30"/>
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+    <view class="schedule" wx:if="{{!isCourseOrSchedule}}">
+      <view class="schedule-container">
+        <view class="schedule-date">12/12/12</view>
+
+        <view class="schedule-main">
+
+          <view wx:for="{{schedule}}" wx:key="index" bindtouchstart='touchStart' bindtouchend="touchEnd" data-index="{{index}}" data-id="{{item.sche_id}}">
+            <view class="schedule-space"></view>
+            <view class="schedule-item">
+              <view class="schedule-week">
+                <view>{{item.week_num}}</view>
+                <view style="color:rgba(9,65,61,.68)">{{item.sche_day_num}}日</view>
+              </view>
+
+              <view class="schedule-deatil">
+                <view class="schedule-detail-name">{{item.sche_name}}</view>
+                <view class="schedule-deatil-bottom">
+                  <view class="schedule-deatil-time">
+                    <image src="/image/timetable_time.png"></image>
+                    <text>{{item.sche_detail_time}}</text>
+                  </view>
+                  <view class="schedule-detail-place">
+                    <image src="/image/timetable_address.png"></image>
+                    <text>{{item.sche_address}}</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        
+        <view class="add-icon">
+          <view class="add-icon-i" bindtap="openScheduleToast">
+            <i-icon type="add" color="#ffffff" size="30"/>
+          </view>
+        </view>
+      </view> 
+    </view>
+
+  </view>
+</view>
+
+
+<!-- 滑动显示区域 -->
+<view class="{{isHidden ? 'fixShow':'fixHide'}}" style="top: 0;left: 0;right:0;bottom:0;" bindtouchstart='touchStart' bindtouchend="touchEnd">
+  <view class="mask" wx:if="{{isHidden}}">
+    <!-- 课程设置 -->
+    <view class="course-setting" wx:if="{{isCourseOrSchedule}}">
+      <!-- 课程的设置页面 -->
+      <view style="{{'padding-top:'+statusBarHeight}}">
+        <view class="class-setting-container">
+          <view class="class-setting-title" style="'height:' + {{menuButtonHeight}} + ';' + 'line-height:' + {{menuButtonHeight}} ">
+            分享课程表 
+            <button open-type='share' bindtap="shareButton">
+              <i-icon type="share" size="24"/>
+            </button>
+          </view>
+          <view class="class-setting-little-title">左滑回到课程表wow!!</view>
+          <view class="item">
+            <view class="lable">显示周</view>
+            <view class="switch"> 
+              <view>{{weekArrays[weekIndex]}}</view>
+              <picker value="{{weekIndex}}" range="{{weekArrays}}" bindchange="bindPickerChange" data-index="01" header-text="请选择当前周数">
+                <i-icon type="enter" size="22"/>
+              </picker>
+            </view>
+          </view>
+          <view class="item">
+            <view class="lable">每周起始日</view>
+            <view class="switch">
+              <view>{{dayArrays[dayIndex]}}</view>
+              <picker value="{{dayIndex}}" range="{{dayArrays}}" bindchange="bindPickerChange" data-index="02">
+                <i-icon type="enter" size="22"/>
+              </picker>
+            </view>
+          </view>
+          <view class="item">
+            <view class="lable">手动添加课程</view>
+            <view class="switch" bindtap="pageNavigation" data-index="01">
+              <i-icon type="enter" size="22"/>
+            </view>
+          </view>
+          <view class="item">
+            <view class="lable">教务系统导入课程</view>
+            <view class="switch" bindtap="pageNavigation" data-index="02">
+              <i-icon type="enter" size="22"/>
+            </view>
+          </view>
+          <view class="item">
+            <view class="lable">个性背景</view>
+            <view class="switch" bindtap="setTimetableBg">
+              <i-icon type="enter" size="22"/>
+            </view>
+          </view>
+          <view class="setting">更多设置<i-icon type="setup" size="24" bindtap="pageNavigation" data-index="03"/></view>
+        </view>
+        
+      </view>
+    </view>
+
+
+    <!-- 日程设置 -->
+    <view class="schedule-setting" wx:if="{{!isCourseOrSchedule}}">
+      <view class="shade" style="{{'padding-top:'+statusBarHeight}}">
+        <view class="class-setting-container">
+          <view class="class-setting-title" style="'height:' + {{menuButtonHeight}} + ';' + 'line-height:' + {{menuButtonHeight}} ">
+            <!-- 分享课程表 -->
+            <i-icon size="24"/>
+          </view>
+          <view class="class-setting-little-title">左滑回到日程wow!!</view>
+          <view class="item">
+            <view class="lable">当前周数</view>
+            <view class="switch"> 
+              <view>{{weekArrays[weekIndex]}}</view>
+              <picker value="{{weekIndex}}" range="{{weekArrays}}" bindchange="bindPickerChange" data-index="01" header-text="请选择当前周数">
+                <i-icon type="enter" size="22"/>
+              </picker>
+            </view>
+          </view>
+
+          <view class="item">
+            <view class="lable">添加日程</view>
+            <view class="switch" bindtap="openScheduleToast">
+              <i-icon type="enter" size="22"/>
+            </view>
+          </view>
+          <view class="item">
+            <view class="lable">个性背景</view>
+            <view class="switch" bindtap="setTimetableBg">
+              <i-icon type="enter" size="22"/>
+            </view>
+          </view>
+          <view class="setting">更多设置<i-icon type="setup" size="24" bindtap="setting"/></view>
+        </view>
+      </view>
+      
+    </view>
+  </view>
+</view>
+
+
+<!-- 弹出添加日程 -->
+<view class="schedule-toast">
+  <!-- 遮罩+添加日程 -->
+  <view wx:if="{{isShowScheduleToast}}" class="shade" style="{{'padding-top:'+navigationBarAndStatusBarHeight}}">
+    <view class="add-schedule-row">
+      <view class="add-schedule-main">
+        <view class="add-schedule-title">
+          <text>添加日程</text>
+        </view>
+        <view class="add-schedule-detail">
+          <input class="input1" placeholder="请输入日程内容" placeholder-style="color: rgba(110,110,110,.72)" value="{{sche_name}}" bindinput="updata" data-index="01"></input>
+          <view class="time">
+            <view class="date">
+              <picker mode="date" value="{{date}}" start="2020-01-2" end="2025-12-12" bindchange="bindDateChange">
+                <image src="/image/timetable_date.png"></image>
+              </picker>
+              <text>2020/5/4</text>
+            </view>
+            <view class="times">
+              <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+                <image src="/image/timetable_time.png"></image>
+              </picker>
+              <text>20:20</text>
+            </view>
+          </view>
+          <view class="place">
+            <image src="/image/timetable_address.png"></image>
+            <input placeholder="请输入地点" placeholder-style="color: rgba(110,110,110,.72)" value="{{sche_address}}" bindinput="updata" data-index="02"></input>
+          </view>
+          <view class="ensure">
+            <view class="add add-mid" bindtap="dealScheduleToastData" data-status="false">取消</view>
+            <view class="add" bindtap="dealScheduleToastData" data-status="true">添加</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,74 @@
+/* pages/timetablePages/oneDayCourseDetail/index.wxss */
+page {
+  background-color:rgba(235, 241, 245, 0.8);
+}
+
+.space{
+  height: 64rpx;
+}
+
+.course-container{
+  display: flex;
+  justify-content: center;
+  color: rgba(39, 61, 73, 1);
+  margin-bottom: 10px;
+}
+
+.course-row{
+  width: 656rpx;
+}
+
+.box-shaow{
+  box-shadow: 0 6rpx 10rpx rgba(61, 98, 119, 0.6);
+  border-radius: 10rpx;
+  background-color: #fff;
+}
+
+.course-title{
+  height: 64rpx;
+  text-align: center;
+  line-height: 64rpx;
+  padding-top: 20rpx;
+  font-size: 20px;
+}
+
+.course-main{
+  padding: 0 40rpx;
+}
+
+.course-item{
+  display: flex;
+  justify-content: left;
+  height: 78rpx;
+  line-height: 78rpx;
+}
+
+.course-item:last-child{
+  padding-bottom: 20rpx;
+}
+
+.lable{
+  width: 180rpx;
+}
+
+.detail{
+  color: rgba(110,110,110,.72);
+}
+
+.br{
+  width: 100%;
+  border-top: 2rpx solid rgba(204, 204, 204, 0.5);
+}
+
+.course-space{
+  height: 30rpx;
+}
+
+/* 无课的提示语句 */
+.text{
+  color: rgba(39, 61, 73, 1);
+  font-family: Courier New;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 50px;
+}

@@ -1,0 +1,30 @@
+<!-- 该页面为书籍分类页面 -->
+<!-- 顶部滑动分类页面开始 -->
+<view class="box">
+    <scroll-view class="classfication" scroll-x="true">
+        <block wx:for="{{classArr}}" wx:key="index">
+            <view data-index="{{index}}" bindtap="changeClass" class="class" style="margin-right:{{index===classArr.length-1?'0':'50rpx'}};color:{{index==chooseClass?'#284556':'#B5B5B5'}}">
+                {{item}}
+                <view wx:if="{{index==chooseClass}}" class="class_bottom"></view>
+            </view>
+        </block>
+    </scroll-view>
+</view>
+<!-- 顶部滑动分类页面结束 -->
+<!-- 图书信息开始 -->
+<block wx:for="{{booksArr}}" wx:key="index">
+    <navigator url="">
+        <view class="booksInf">
+            <image class="img" src="{{item.img}}" />
+            <view class="name">{{item.name}}</view>
+            <view class="publish">{{item.publish}}</view>
+            <view class="lowestPrice">在售最低价 {{item.lowPrice}}￥</view>
+            <view class="borrow">/借阅 {{item.borrow}}本</view>
+            <view class="sell">转卖 {{item.sell}}本</view>
+        </view>
+    </navigator>
+</block>
+<!-- 图书信息结束 -->
+
+<import src="/pages/secondHandBook/tabbar_template/index.wxml"/>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>

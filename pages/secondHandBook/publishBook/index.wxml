@@ -1,0 +1,111 @@
+<!--pages/secondHandBook/publishBook/index.wxml-->
+<view class="book-container" wx:if="{{isnOrNoisn}}">
+  <view class="book-detail">
+    <image src="{{bookInfo.coverUrl}}" mode="aspectFill"></image>
+    <view class="detail">
+      <view class="title">{{bookInfo.title}}</view>
+      <view class="item">出版社：
+        <text>{{bookInfo.press}}</text>
+      </view>
+      <view class="item">出版时间：
+        <text>{{bookInfo.date}}</text>
+      </view>
+      <view class="item">作者：
+        <text>{{bookInfo.auther}}</text>
+      </view>
+      <view class="item">定价：
+        <text>{{bookInfo.pricing}}</text>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+
+<view class="person-idea" wx:if="{{!isnOrNoisn}}">
+  <view class="item">
+    <view class="lable">图书名</view>
+    <view class="input">
+      <input placeholder="请输入图书名称"></input>
+    </view>
+  </view>
+  <view class="item">
+    <view class="lable">作者</view>
+    <view class="input">
+      <input placeholder="请输入图书作者"></input>
+    </view>
+  </view>
+  <view class="item">
+    <view class="lable">出版社</view>
+    <view class="input">
+      <input placeholder="请输入出版社"></input>
+    </view>
+  </view>
+  <view class="item">
+    <view class="lable">出版时间</view>
+    <view class="input">
+      <input placeholder="请输入出版时间"></input>
+    </view>
+  </view>
+  <view class="item">
+    <view class="lable">定价</view>
+    <view class="input">
+      <input placeholder="请输入图书定价"></input>
+    </view>
+  </view>
+  <view class="item">
+    <view class="lable">图书封面</view>
+    <view class="input">
+      <text>上传图片</text>
+    </view>
+  </view>
+</view>
+
+<view class="person-idea">
+  <view class="item">
+    <view class="lable">销售方式</view>
+    <view class="input">
+      <radio-group bindchange="radioChange">
+        <radio color="#284352" checked>出售</radio>
+        <radio color="#284352">租借</radio>
+      </radio-group>
+    </view>
+  </view>
+  <view class="item">
+    <view class="lable">售价</view>
+    <view class="input">
+      <input placeholder="想卖多少钱?" type="number"></input>
+    </view>
+  </view>
+  <view class="item">
+    <view class="lable">新旧程度</view>
+    <view class="input">
+      <picker header-text="书新旧程度选择" bindchange="oldAndNewPickerChange" value="{{bookOldAndNewIndex}}" range="{{oldAndNewItems}}">
+        <view class="picker">
+          {{oldAndNewItems[bookOldAndNewIndex]}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="item">
+    <view class="lable">分类</view>
+    <view class="input">
+      <picker header-text="书新旧程度选择" bindchange="oldAndNewPickerChange" value="{{classifyIndex}}" range="{{classifyItems}}">
+        <view class="picker">
+          {{classifyItems[classifyIndex]}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="item">
+    <view class="lable">描述</view>
+    <view class="input">
+      <input placeholder="想说点什么"></input>
+    </view>
+  </view>
+
+</view>
+
+<view class="ensure">
+  <view class="ensure-button" bindtap="publishBook">发布图书</view>
+</view>

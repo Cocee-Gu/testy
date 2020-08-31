@@ -1,0 +1,71 @@
+<!--详细信息栏开始-->
+<view class="information">
+  <form bindsubmit="sub">
+    <!--物品名称开始-->
+    <view class="goods" style="border-bottom: 1px solid rgb(238, 238, 238) !important;height:85rpx !important;margin-top:10rpx;">
+      <label>物品名称:
+        <text>*</text>
+      </label>
+      <input type="text" placeholder="请填入物品名称" name='laf_name' style="padding-left:220rpx !important;"></input>
+    </view>
+    <!--分割线开始-->
+    <view bindtap="hidden">
+      <van-divider contentPosition="center" textColor="#284152">是否开启详细信息栏目
+        <van-icon name="arrow-down" /></van-divider>
+    </view>
+    <!--隐藏*******************************************-->
+    <view class="choice" style="{{choice?'':'display:none'}}">
+      <!--物品信息列表开始-->
+      <view class="goods_list" wx:for="{{option0}}" wx:key="title">
+        <label>{{item.title}}:</label>
+        <input type="{{item.type}}" placeholder="{{item.text}}" name='{{item.name}}' placeholder-style="text-align:right"></input>
+      </view>
+      <view style="margin-top:15rpx;margin-bottom:25rpx;width:96%;">
+        <label>丢失/拾到时间：</label>
+        <van-datetime-picker type="date" value="{{ currentDate }}" bind:input="onInput" min-date="{{ mindate }}" max-date="{{ maxdate }}" formatter="{{ formatter }}" item-height="30" cancel-button-text="" confirm-button-text="" />
+      </view>
+    </view>
+    <!--丢失/拾到开始-->
+    <view class="DIU">
+      <label>丢失/拾到:
+        <text>*</text>
+      </label>
+      <radio-group name="radio" class="classify">
+        <radio wx:for="{{option1}}" wx:key="text" value="{{item.value}}" color="#1296db">{{item.text}}
+        </radio>
+      </radio-group>
+    </view>
+    <!--分类开始-->
+    <view class="checkbox" style="margin-bottom:90rpx;">
+      <label>分类:
+        <text>*</text>
+      </label>
+      <radio-group name="classify" class="classify">
+        <radio wx:for="{{option2}}" wx:key="id" value="{{item.id}}" color="#1296db">{{item.lafCtgName}}
+        </radio>
+      </radio-group>
+    </view>
+    <!--详细信息描述开始-->
+    <view class="other">
+      <label>详细信息描述:
+        <text>*</text>
+      </label>
+      <textarea placeholder='（请填写详细信息描述信息,100字上限)' name="laf_text" maxlength="100"></textarea>
+    </view>
+    <!--图片开始-->
+    <view class="imagepush">
+      <view wx:for="{{fileList}}" wx:key="item" bindlongtap="shanchu" data-id="{{index}}">
+        <image src="{{item}}" style="width:100%;height:100%;"></image>
+      </view>
+      <view bindtap="chooseimg" wx:if="{{fileList.length === 3?false:true}}">
+        <image src="../../../image/lostandfound/add.png" class="add"></image>
+      </view>
+    </view>
+    <!--提交开始-->
+    <view class="fabu_button">
+      <button type="primary" form-type="submit">提 交</button>
+    </view>
+    <view class="bottomTip">(长按图片进行删除)</view>
+  </form>
+</view>
+<!--详细信息栏结束-->

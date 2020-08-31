@@ -1,0 +1,19 @@
+<!--custom-tab-bar/index.wxml-->
+<view class="tabBar">
+  <view class="tabBar-item" catchtap="switchTap" data-index="0">
+    <image src="{{tabBar === 0 ? '/image/tabBar_tool_fill.png' : '/image/tabBar_tool.png'}}"></image>
+    <view class="tabBar-item-title" style="{{tabBar === 0 ? 'color:rgba(170,203,226,1)' : 'color:rgba(221,221,221,1)'}}">工具</view>
+  </view>
+  <view class="tabBar-item" catchtap="switchTap" data-index="1">
+    <image src="{{tabBar === 1 ? '/image/tabBar_forum_fill.png' : '/image/tabBar_forum.png'}}"></image>
+    <view class="tabBar-item-title" style="{{tabBar === 1 ? 'color:rgba(170,203,226,1)' : 'color:rgba(221,221,221,1)'}}">论坛</view>
+  </view>
+  <view class="tabBar-item" catchtap="switchTap" data-index="2">
+    <image src="{{tabBar === 2 ? '/image/tabBar_timetable_fill.png' : '/image/tabBar_timetable.png'}}"></image>
+    <view class="tabBar-item-title" style="{{tabBar === 2 ? 'color:rgba(170,203,226,1)' : 'color:rgba(221,221,221,1)'}}">课程表</view>
+  </view>
+  <view class="tabBar-item" catchtap="switchTap" data-index="3">
+    <image src="{{tabBar === 3 ? '/image/tabBar_mine_fill.png' : '/image/tabBar_mine.png'}}"></image>
+    <view class="tabBar-item-title" style="{{tabBar === 3 ? 'color:rgba(170,203,226,1)' : 'color:rgba(221,221,221,1)'}}">我的</view>
+  </view>
+</view>

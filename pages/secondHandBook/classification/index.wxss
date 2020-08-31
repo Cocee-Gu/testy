@@ -1,0 +1,80 @@
+/* pages/SHB/classification/index.wxss */
+page {
+  background-color: rgba(235, 241, 245, 0.54);
+}
+.box {
+  width: 662rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 16rpx auto;
+}
+.classfication {
+  height: 55rpx;
+  width: 100%;
+  margin-top: 2rpx;
+}
+
+.classfication .class {
+  font-size: 32rpx;
+  display: inline-block;
+  line-height: 36rpx;
+  height: 46rpx;
+}
+.classfication .class_bottom {
+  height: 4rpx;
+  width: 98rpx;
+  background-color: #284556;
+  position: relative;
+  left: 16rpx;
+  top: 10rpx;
+}
+/* 图书信息开始 */
+.booksInf {
+  width: 100%;
+  height: 190rpx;
+  padding-top: 10rpx;
+}
+.booksInf .img {
+  width: 160rpx;
+  height: 190rpx;
+  float: left;
+  margin-left: 22rpx;
+  margin-right: 46rpx;
+}
+.booksInf .name {
+  font-size: 28rpx;
+  width: 508rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  margin-top: 18rpx;
+  color: #142e3d;
+}
+.booksInf .publish {
+  width: 508rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24rpx;
+  line-height: 44rpx;
+  color: rgb(196, 196, 196);
+  margin-top: 10rpx;
+}
+.booksInf .lowestPrice {
+  color: rgba(61, 98, 119, 0.92);
+  font-size: 28rpx;
+  margin-top: 28rpx;
+}
+.booksInf .sell {
+  float: right;
+  font-size: 28rpx;
+  color: #264455;
+  transform: translate(-22rpx, -100rpx);
+}
+.booksInf .borrow {
+  float: right;
+  font-size: 28rpx;
+  color: #264455;
+  transform: translate(-22rpx, -100rpx);
+}

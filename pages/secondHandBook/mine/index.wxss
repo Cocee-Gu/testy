@@ -1,0 +1,130 @@
+/*页面背景*/
+page {
+  background: #EBF1F5;
+}
+/*个人信息*/
+.message {
+  background-color: #fffefe;
+  border: 1rpx solid #fffefe;
+  height: 554rpx;
+  width: 694rpx;
+  margin: auto;
+  margin-top: 100rpx;
+  border-radius: 10rpx;
+  box-shadow: 0rpx 6rpx 12rpx #9FA7AC;
+}
+.message .first {
+  display: flex;
+  flex: 1;
+  padding-left: 66rpx;
+  margin-top: 70rpx;
+}
+.message .first image {
+  height: 176rpx;
+  width: 176rpx;
+  border-radius: 10rpx;
+}
+.message .first .name {
+  display: flex;
+  margin-left: 260rpx;
+  align-items: center;
+  color: #284352;
+  font-size: 44rpx;
+}
+.message .second {
+  display: flex;
+  padding-left: 30rpx;
+  margin-top: 46rpx;
+}
+.message .second .confirm {
+  color: #284352;
+  font-size: 36rpx;
+}
+.message .second .reconfirm {
+  color: #284352;
+  font-size: 36rpx;
+  margin-left: 230rpx;
+}
+.message .second .arrow {
+  width: 32rpx;
+  height: 32rpx;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}
+/*我的发布*/
+.icon {
+  display: flex;
+  flex-direction: row;
+  margin-top: -420rpx;
+  margin-left: -520rpx;
+  justify-content: center;
+}
+.icon .send {
+  display: flex;
+  align-items: center;
+}
+.icon .send .img1 {
+  height: 140rpx;
+  width: 140rpx;
+}
+.icon .send .img2 {
+  margin-left: -135rpx;
+  height: 112rpx;
+  width: 112rpx;
+}
+.shb_pub {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #284352;
+  font-size: 35rpx;
+}
+.shb_pub .shb_mp {
+  border-radius: 10rpx;
+  margin-top: 210rpx;
+  border: 1rpx solid #fffefe;
+  height: 272rpx;
+  width: 694rpx;
+  display: flex;
+  justify-content: center;
+  margin-top: 144rpx;
+  background-color: #fffefe;
+  margin-bottom: 60rpx;
+}
+.shb_pub .shb_mp .shb_publish {
+  margin-left: -200rpx;
+  margin-top: -50rpx;
+  font-size: 36rpx;
+}
+.all {
+  margin-left: 518rpx;
+  color: #727272;
+  font-size: 32rpx;
+  margin-top: -40rpx;
+  display: flex;
+}
+.all .arrow2 {
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: -10rpx;
+}
+.pub_pics {
+  display: flex;
+}
+.pub_pics .bp1 {
+  width: 160rpx;
+  height: 190rpx;
+  margin-left: 50rpx;
+}
+.pub_pics .bp2 {
+  width: 160rpx;
+  height: 190rpx;
+}
+.pub_pics .bp3 {
+  width: 160rpx;
+  height: 190rpx;
+}
+.pub_pics .bp4 {
+  width: 160rpx;
+  height: 190rpx;
+}

@@ -1,0 +1,519 @@
+/* pages/timetable/index.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(235, 241, 245, 0.8);
+}
+
+/* ###################### 下面是navgationBar的样式 ######################### */
+
+
+/* 顶部导航栏样式开始 */
+.page{
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+
+/* 导航栏样式 */
+.page .navigation-container{
+  background-color: white;
+  font-family: SF UI Test;
+  color:rgba(61, 98, 119, 1);
+  width: 100%;
+  position:fixed;
+  top:0;
+  box-shadow: 0 0 rgba(204, 204, 204,.25);
+  z-index: 100;
+}
+
+.page .statusBar{
+  background-color: rgba(40, 67, 82, 1);
+}
+
+.page .navigation-bar{
+  background-color: rgba(40, 67, 82, 1);
+}
+
+.page .navigation-buttons{
+  display: flex;
+  padding-top: 6px;
+}
+
+.page .navigation-week{
+  width: 150rpx;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 0 40rpx 40rpx 0;
+  height: 28px;
+  margin-top: 4px;
+}
+.page .navigation-week view{
+  font-size: 14px;
+  margin: auto;
+}
+
+.page .navigation-week i-icon {
+  margin: auto;
+  margin-left: 0;
+}
+
+.page .navigation-switch{
+  width: 216rpx;
+  background-color: rgba(151, 187, 212, 1);
+  text-align: center;
+  display: flex;
+  box-shadow: 0 0 rgba(204, 204, 204,.45);
+  padding: 6rpx 6rpx;
+  height: 22px;
+  margin-top: 4px;
+  float: right;
+  margin-left: 117rpx;
+  color: #fff;
+}
+
+.page .navigation-switch view{
+  width: 110rpx;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page .hover{
+  background-color: #FFF;
+  color: rgba(170, 203, 226, 1);
+}
+/* 顶部导航栏样式结束 */
+
+/* ###################### 下面是课程的样式 ############################## */
+
+/* 课表样式 */
+.course .class-container{
+  font-family: SF UI Test;
+  color: rgba(61, 98, 119, 1);  
+}
+
+.class-week{
+  background-color: rgba(164, 197, 217, 0.1);
+  height: 100rpx;
+  font-size: 14px;
+  display: flex;
+}
+
+.class-month{
+  width: 74rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.class-day{
+  width: 94rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.class-day view:last-child{
+  font-size: 20rpx;
+  margin-top: 6rpx;
+}
+
+/* 课程表的主要区域，也就是课程展示区域 */
+.class-main{
+  /* padding-top: 14rpx; */
+  display: flex;
+  margin-bottom: 110rpx;
+}
+
+/* 索引列 */
+.class-index{
+  background-color: rgba(164, 197, 217, 0.1);
+}
+
+.class-index-item{
+  width: 74rpx;
+  height: 121rpx;
+  display: flex;
+}
+
+.class-index-item-index{
+  width: 74rpx;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 内容列 */
+.class-detail{
+  display: flex;
+}
+
+.class-detail-item{
+  width: 94rpx;
+  border-right: 2rpx solid rgba(3,86,80,.68);
+  display: flex;
+  flex-direction: column;
+}
+
+.class-detail-item .class-item{
+  width: 100%;
+  height: 120rpx;
+  border-bottom: 2rpx solid rgba(236, 242, 247, 1);
+}
+
+
+.class-item-detail{
+  border-bottom: 2rpx solid rgba(175,232,185,.2);
+  width: 100%; 
+  color: rgba(61, 98, 119, 1);
+}
+
+
+/* 课程显示区域(下面课程显示的区域) */
+.flex-item {
+  width: 84rpx; 
+  height: 120px;
+}
+
+.kcb-item {
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 0 15rpx rgba(204, 204, 204,.45);
+}
+
+.smalltext {
+  font-size: 24rpx;
+  width: 80rpx;
+  display: inline-block;
+  color: rgba(61, 98, 119, 1);
+  padding-left: 2px;
+  padding-right: 2px;
+  word-wrap: break-word;
+  /* content: ""; */
+  display:-webkit-box;
+  
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+
+
+
+/* 添加按钮 */
+.add-icon{
+  position:fixed;
+  bottom: 130rpx;
+  display: flex;
+  padding-left: 50%;
+  left: -53rpx;
+}
+
+.add-icon-i{
+  background-color: rgba(61, 98, 119, 0.92);
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 rgba(204, 204, 204,.45);
+}
+
+
+/* ###################### 下面是日程的样式 ############################## */
+/* 日程 */
+.schedule-container{
+  color: #09413d;
+  font-size: 14px;
+  /* bottom: 0; */
+  width: 750rpx;
+}
+
+
+.schedule-date{
+  height: 60rpx;
+  background-color: rgba(61, 98, 119, 0.18);
+  padding-left: 20rpx;
+  padding-top: 15rpx;
+  box-shadow: 0 1rpx rgba(204, 204, 204,.25);
+  font-size: 36rpx;
+  color: #fff;
+}
+
+.schedule-main{
+  background-color: rgba(165,239,178,.05);
+  height: 100%; 
+  margin-bottom: 240rpx; 
+}
+
+.schedule-space{
+  height: 44rpx;
+}
+
+.schedule-item{
+  height: 106rpx;
+  background-color: white;
+  display: flex;
+  justify-content: left;
+  box-shadow: 0 4rpx 6rpx rgba(61, 98, 119, 0.4);
+
+}
+
+.schedule-week{
+  width: 166rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.schedule-week view:last-child {
+  font-size: 26rpx;
+  margin-top: 10rpx;
+}
+
+.schedule-deatil{
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.schedule-deatil-bottom{
+  display: flex;
+}
+
+.schedule-deatil-bottom text {
+  font-size: 26rpx;
+  line-height: 40rpx;
+}
+
+image{
+  width: 36rpx;
+  height: 36rpx;
+  margin-top: 10rpx;
+  margin-right: 16rpx;
+}
+
+.schedule-deatil-time{
+  margin-right: 36rpx;
+}
+
+
+/* ############################# 课程设置和日程设置 ######################### */
+
+.mask {
+  width: 100%;
+  height: 100%;
+}
+
+/* course-settting设置 */
+.class-setting-container{
+  padding-left: 40rpx;
+  width: 470rpx;
+  font-family: Arial;
+  color: rgba(39, 61, 73, 1);
+  font-size: 30rpx;
+}
+
+.class-setting-title{
+  color: #FFF;
+  padding-top: 6px;
+  font-size: 40rpx;
+  display: flex;
+}
+
+.class-setting-title button {
+  background-color: rgba(255, 255, 255,.00);
+  color: #fff;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 100rpx;
+  display: flex;
+  border: none;
+}
+
+.class-setting-little-title{
+  padding-top: 106rpx;
+  color: rgba(39, 61, 73, 1);
+  padding-bottom: 24rpx;
+  font-size: 34rpx;
+}
+
+.class-setting-container .item{
+  width: 100%;
+  height: 76rpx;
+  line-height: 76rpx;
+  background-color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 76rpx;
+  box-shadow: 0 0 20rpx rgba(8, 8, 8,.4);
+  border-radius: 8rpx;
+}
+
+.class-setting-container .lable{
+  margin-left: 16rpx;
+}
+
+.class-setting-container .switch{
+  display: flex;
+}
+
+.class-setting-container .switch i-icon{
+  margin-left: 10rpx;
+  margin-right: 5rpx;
+}
+
+.class-setting-container .setting{
+  color: #FFF;
+  font-size: 36rpx;
+}
+
+.class-setting-container .setting i-icon{
+  margin-left: 30rpx;
+}
+
+
+
+
+
+/* ############################ 滑动过渡动画 ############################# */
+
+.fixHide {
+  transition: all .3s ease;
+  transform: translateX(-100%);
+}
+.fixShow {
+  transition: all .3s ease;
+  height: 100%;
+  transform: translateX(0%);
+  background-color: rgba(61, 98, 119, 0.8);
+}
+.pageHide {
+  transition: all .3s ease;
+  bottom: 0;
+  transform: translateX(0.001) scaleY(1);
+}
+.pageShow {
+  position: fixed;
+  transition: all .3s ease;
+  height: 1400rpx;
+  width: 100%;
+  transform: translateX(72%) translateY(8%);
+}
+
+
+/* ############################ 添加日程的弹出框 ############################ */
+/* 遮罩层 */
+.schedule-toast .shade{
+  position: fixed;
+  top: 0;
+  z-index: 200;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(235, 241, 245, 0.5);
+}
+
+
+/* 添加日程 */
+.schedule-toast .add-schedule-row{
+  margin-top: 230rpx;
+  display: flex;
+  justify-content: center;
+  color: rgba(39, 61, 73, 1);
+}
+
+.schedule-toast .add-schedule-main{
+  height: 450rpx;
+  width: 542rpx;
+  background-color: white;
+  font-size: 14px;
+}
+
+.schedule-toast .add-schedule-title{
+  height: 90rpx;
+  color: white;
+  background-color: rgba(39, 61, 73, 1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.schedule-toast .add-schedule-detail{
+  padding: 0 40rpx;
+}
+
+.schedule-toast .add-schedule-detail image{
+  width: 55rpx;
+  height: 55rpx;
+  margin-right: 16rpx;
+}
+
+.schedule-toast .input1{
+  margin: 40rpx 0;
+  padding-left: 40rpx;
+  padding-bottom: 10rpx;
+  padding-right: 40rpx;
+  text-align: center;
+}
+
+.schedule-toast .time{
+  display: flex;
+}
+
+.schedule-toast .time text{
+  padding-top: 20rpx;
+}
+
+.schedule-toast .time .date{
+  margin-right: 60rpx;
+}
+
+.schedule-toast .place{
+  display: flex;
+  margin-top: 4rpx;
+}
+
+.schedule-toast .place input{
+  padding-top: 10rpx;
+}
+
+.schedule-toast picker{
+  display: inline;
+}
+
+.schedule-toast .date,.times{
+  display: flex;
+}
+
+/* 添加 */
+.schedule-toast .ensure{
+  display: flex;
+  justify-content: center;
+}
+
+.schedule-toast .add-mid{
+  border-right: 2rpx dotted rgba(204, 204, 204,.3);
+}
+
+.schedule-toast .add{
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 35%;
+  border-top: 2rpx solid rgba(204, 204, 204,.45);
+  display: flex;
+  justify-content: center;
+  margin-top: 10rpx;
+}

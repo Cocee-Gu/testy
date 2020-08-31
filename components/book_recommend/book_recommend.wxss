@@ -1,0 +1,46 @@
+.books_box {
+  width: 100%;
+  height: 190rpx;
+  padding-top: 10rpx;
+}
+.books_box .book_image {
+  width: 160rpx;
+  height: 190rpx;
+  margin-left: 30rpx;
+  float: left;
+  margin-right: 48rpx;
+}
+.books_box .book_name {
+  font-size: 24rpx;
+  width: 508rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 32rpx;
+  margin-top: 26rpx;
+  color: #444;
+}
+.books_box .book_inf {
+  width: 508rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24rpx;
+  line-height: 44rpx;
+  color: rgb(196, 196, 196);
+  margin-top: 34rpx;
+}
+.books_box .book_new {
+  width: 118rpx;
+  height: 68rpx;
+  background-color: #fff;
+  color: rgba(61, 98, 119, 0.92);
+  font-size: 24rpx;
+  float: right;
+  text-align: center;
+  line-height: 68rpx;
+  margin-right: 30rpx;
+  transform: translateY(-88rpx);
+  border-radius: 50%;
+  box-shadow: 0 6rpx 12rpx rgba(92, 92, 92, 0.16);
+}

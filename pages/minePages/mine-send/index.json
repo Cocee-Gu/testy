@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+     "tabs":"../../components/tabs/tabs",
+     "tabstwo":"../../components/tabstwo/tabs"
+  },
+  "navigationBarBackgroundColor": "#284352",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "我的发布",
+  "navigatonBarColor":"white"
+}

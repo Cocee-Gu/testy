@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "shb_mySale": "../../../components/shb_mySale/index",
+    "shb_myBorrow": "../../../components/shb_myBorrow/index"
+  },
+  "navigationBarBackgroundColor": "#284352",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "我的发布",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light" 
+}

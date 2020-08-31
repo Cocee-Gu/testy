@@ -1,0 +1,30 @@
+<!--书本图片-->
+<view class="book_pics">
+    <image bindtap='' src="/image/secondHandBook_image/shb_bookdetail.png"></image>
+</view>
+<!--书本图片结束-->
+
+<!--书本介绍-->
+<view class="piece">
+    <view class="text">
+        <view class="text1">大学物理1</view>
+        <view class="text2">刘刘刘</view>
+        <view class="text2">出版社</view>
+        <view class="text3">内容介绍</view>
+        <view class="text4">大学物理，是大学理工科类的一门基础课程，通过课程的学习，使学生熟悉自然界物质的结构，性质，相互作用及其运动的基本规律，为后继专业基础与专业课程的学习及进一步获取有关知识奠定必要的物理基础。但工科专业以力学基础和电磁学为主要授课。</view>
+    </view>
+</view>
+<!--书本介绍结束-->
+
+<!--书本目前出售/出租状态-->
+<view class="btm_tool">
+  <view class="tool_item btn_sale">
+      <view class="btn_sale1">55人正在出售</view>
+      <view class="btn_sale2">低至12元起</view>
+  </view>
+  <view class="tool_item btn_rent">
+    <view class="btn_rent1">55人正在出租</view>
+    <view class="btn_rent2">最低0.5/周</view>
+  </view>  
+</view> 
+<!--书本目前出售/出租状态结束-->

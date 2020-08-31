@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/secondHandBook/mine/index",
+    "pages/secondHandBook/classification/index",
+    "pages/index/index",
+    "pages/login/index",
+    "pages/mine/index",
+    "pages/secondHandBook/publishBook/index",
+    "pages/secondHandBook/index/index",
+    "pages/secondHandBook/currentBookSelling/index",
+    "pages/secondHandBook/currentBookBorrowing/index",
+    "pages/secondHandBook/bookDetails/index",
+    "pages/secondHandBook/uploadBooks/index",
+    "pages/secondHandBook/mineUnverified/index",
+    "pages/secondHandBook/myPublish/index",
+    "pages/minePages/personalData/index",
+    "pages/minePages/certificationPage/index",
+    "pages/minePages/studentCertification/index",
+    "pages/minePages/teacherCertification/index",
+    "pages/timetable/index",
+    "pages/timetablePages/addCourse/index",
+    "pages/timetablePages/importCourse/index",
+    "pages/timetablePages/oneDayCourseDetail/index",
+    "pages/forum/index",
+    "pages/mine-send/index"
+  ],
+  "usingComponents": {
+    "i-icon": "/components/zh-icon/index"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#284352",
+    "navigationBarTitleText": "工程大青年",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#DDDDDD",
+    "selectedColor": "#AACBE2",
+    "backgroundColor": "#284351",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "工具"
+      },
+      {
+        "pagePath": "pages/forum/index",
+        "text": "论坛"
+      },
+      {
+        "pagePath": "pages/timetable/index",
+        "text": "课程表"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap31.json"
+}

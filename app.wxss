@@ -1,0 +1,30 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+/* 未选中的 背景样式 */
+radio .wx-radio-input{ 
+    height: 30rpx; 
+    width: 30rpx;
+    border-radius: 50%;
+ }
+/* 选中后的 对勾样式 */
+radio .wx-radio-input.wx-radio-input-checked::before{
+   border-radius: 50%;
+   width: 25rpx; 
+   height: 25rpx;
+   font-size: 0;
+   color:#284352;
+   background: #284352;
+    border: 5rpx solid #fff;
+}
+@import "components/collect&send-icon/index.wxss";
+@import "components/collect&send-icon/money.wxss";
+@import "/pages/secondHandBook/tabbar_template/index.wxss";

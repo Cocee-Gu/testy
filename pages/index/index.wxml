@@ -1,0 +1,160 @@
+<!-- index.wxml -->
+<view class="index_all">
+    <!-- 轮播图背景颜色 -->
+    <view class="swiper_back"></view>
+    <!-- 顶部轮播图开始 -->
+    <view class="carousel_box">
+        <swiper indicator-dots="true" autoplay="true" indicator-color="#fff" indicator-active-color="#7c7c7c" interval="2500" bindchange="change" class="carousel_body" previous-margin='50px' next-margin='50px' circular="true">
+            <swiper-item class="swiper_item" style="" wx:for="{{carouselArr}}" wx:key="index">
+                <image class="swiper_image" src="{{item}}" style="height:{{index==carouselIndex?'80%':''}};width:{{index==carouselIndex?'100%':''}};transform:{{index==carouselIndex?'translateY(0)':'translateY(10rpx)'}}" />
+            </swiper-item>
+        </swiper>
+    </view>
+    <!-- 顶部轮播图结束 -->
+    <!-- 工具栏开始 -->
+    <view class="tool">
+        <!-- 工具栏标题栏开始 -->
+        <view class="tool_title">
+            <image class="tool_title_image" src="../../image/tool-icon.png" mode="aspectFit" />
+            <view class="tool_title_text">工具</view>
+        </view>
+        <!-- 工具栏标题栏结束 -->
+        <!-- 工具栏主体部分开始 -->
+        <view class="tool_body">
+            <!-- 工具栏功能部分开始 -->
+            <view class="tool_item" wx:for="{{toolsArr}}" wx:key="index">
+                <navigator url="{{item.url}}" bindtap="chooseTool" data-index="{{index}}">
+                    <view class="image_box">
+                        <image class="tool_item_image" src="{{item.image}}" />
+                    </view>
+                </navigator>
+                <view class="tool_item_text">{{item.name}}</view>
+            </view>
+            <!-- 工具栏功能部分结束 -->
+        </view>
+        <!-- 工具栏主体部分结束 -->
+    </view>
+    <!-- 工具栏结束 -->
+    <!-- 任务代办栏开始 -->
+    <view class="mission">
+        <!-- 任务待办标题部分开始 -->
+        <view class="mission_title">
+            <image class="mission_title_image" src="../../image/tool-renwu.png" mode="aspectFit" />
+            <view class="mission_title_text">任务待办</view>
+        </view>
+        <!-- 任务待办标题部分结束 -->
+        <!-- 任务代办主体部分开始 -->
+        <view class="mission_body">
+            <view class="mission_body_item">
+                <!-- 代办任务主体图片 -->
+                <view class="mission_inf">
+                    <image class="mission_item_image" src="{{missionArr.image}}" />
+                    <view class="mission_item_name">{{missionArr.name}}</view>
+                </view>
+                <!-- 待办任务事项开始主要加个内边距把后面的东西往后推一推 -->
+                <view class="mission_item_box">
+                    <!-- 过度的虚线开始 -->
+                    <view class="step_line">
+                        <view class="round"></view>
+                        <view class="dotted"></view>
+                    </view>
+                    <!-- 过度的虚线结束 -->
+                    <!-- 待办任务内容 -->
+                    <view class="mission_item" wx:for="{{missionArr.mission}}" wx:key="index">
+                        <view class="missions">{{item}}</view>
+                        <!-- 过度的虚线开始 -->
+                        <view class="step_line">
+                            <view class="dotted" wx:if="{{!index}}"></view>
+                        </view>
+                        <!-- 过度的虚线结束 -->
+                    </view>
+                    <!-- 过度的虚线开始 -->
+                    <view class="step_line">
+                        <view class="dotted"></view>
+                        <view class="round"></view>
+                    </view>
+                    <!-- 过度的虚线结束 -->
+                </view>
+                <!-- 待办任务事项结束 -->
+            </view>
+        </view>
+        <!-- 任务代办主体部分结束 -->
+    </view>
+    <!-- 任务代办栏结束 -->
+    <!-- 课程表栏开始 -->
+    <view class="curriculum">
+        <!-- 课程表标题栏开始 -->
+        <view class="curriculum_title">
+            <image class="curriculum_title_image" src="../../image/tool-timetable.png" mode="aspectFit" />
+            <view class="curriculum_title_text">课程表</view>
+            <view class="curriculum_title_hide" data-index="01" bindtap="hideCurriculum">
+                {{showCurriculum?'折叠':'展开'}}
+            </view>
+        </view>
+        <!-- 课程表标题栏结束 -->
+        <!-- 课程表主体部分开始 -->
+        <view class="curriculum_body" wx:if="{{showCurriculum}}" wx:key="index">
+            <!-- 时间 -->
+            <view class="curriculum_item_time">{{curriculumArr.time}}</view>
+            <!-- 课程信息 -->
+            <view class="curriculum_item_classInf " wx:for="{{curriculumArr.classInf}}" wx:key="index">
+                <view>
+                    <view>{{item.length}}</view>
+                    <view class="part1">{{item.part1}}</view>
+                    <view class="name">{{item.name}}</view>
+                </view>
+                <view class="part_to">
+                    <view class="line"></view>
+                </view>
+                <view>
+                    <view class="part2">{{item.part2}}</view>
+                    <view class="add">{{item.add}}</view>
+                </view>
+                <!-- 课程之间分界线(满足只要不是最后一个，下面就有分界线) -->
+                <view class="is_down_line {{index<curriculumArr.classInf.length-1?'down_line':''}}"></view>
+            </view>
+            <!-- 如果今天没课才显示的内容 -->
+            <view class="noCurriculum" wx:if="{{isCurriculum}}">今天没课哦，去干点别的事情吧！</view>
+        </view>
+        <!-- 课程表主体部分结束 -->
+    </view>
+    <!-- 课程表栏结束 -->
+    <!-- 日程栏部分开始 -->
+    <view class="schedule">
+        <!-- 日程部分标题开始 -->
+        <view class="schedule_title">
+            <image class="schedule_title_image" src="../../image/tool-richeng.png" mode="aspectFit" />
+            <view class="schedule_title_text">日程</view>
+            <view class="schedule_title_hide" data-index="02" bindtap="hideCurriculum">
+                {{showSchedule?'折叠':'展开'}}
+            </view>
+        </view>
+        <!-- 日程部分标题结束 -->
+        <!-- 日程主体部分开始 -->
+        <view class="schedule_body" wx:if="{{showSchedule}}" wx:key="index">
+            <view class="schedule_item" wx:for="{{scheduleArr}}" wx:key="index">
+                <view class="date">{{item.date}}</view>
+                <view>
+                    <view class="week">{{item.week}}</view>
+                    <view class="inf">{{item.inf}}</view>
+                </view>
+                <view>
+                    <view class="when">{{item.when}}</view>
+                    <view class="time">{{item.time}}</view>
+                    <view class="add">{{item.add}}</view>
+                </view>
+                <!-- 日程之间分界线(满足只要不是最后一个，下面就有分界线) -->
+                <view class="is_down_line {{index<scheduleArr.length-1?'down_line':''}}"></view>
+            </view>
+            <!-- 如果今天没课才显示的内容 -->
+            <view class="noSchedule" wx:if="{{isSchedule}}">近期暂无日程安排！</view>
+        </view>
+        <!-- 日程主体部分结束 -->
+    </view>
+    <!-- 日程栏部分结束 -->
+    <!-- 底部背景图开始 -->
+    <view class="image">
+        <image class="school_image" mode="bottom" src="../../image/tool-school.png" />
+    </view>
+    <!-- 底部背景图结束 -->
+</view>
