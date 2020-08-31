@@ -7,13 +7,38 @@ Page({
 	/**
 	 * 页面的初始数据
 	 */
+	bookGo(e){
+		console.log(e)
+	},
 	getServerData() {
 		const res = request({
-		  url: "book-market/userBook/",
-		  data: {isbn:"wqeiniq"},
+		  url: "book-market/userBook/"+(this.data.isBuy?'sell':'borrow')+'?pageIndex=1&pageSize=100',
+		  data: {},
 		  method: "get"
 		})
+		res.then((res1)=>{
+			let arr=[]
+			for (let s of res1.data.data) {
+				
+					s.img= s.imageUrls
+					s.name= s.bookName
+					s.author= s.title
+					s.inf= s.address
+					s.price= s.sellPrice
+					s.ori_price= 40
+					s.new= s.degree+"成新"
+				
+			}
+			this.setData({
+				booksArr:res1.data.data
+			})
+			
+			
+			
+			
+		})
 	},
+	
 	data: {
 		// 首页轮播图
 		carouselIndex: 0,
@@ -94,7 +119,6 @@ Page({
 
 		iSN: null, // ISN 码
 	},
-
 	/**
 	 * 更新输入的ISN码
 	 */
@@ -180,6 +204,7 @@ Page({
 			this.setData({
 				isBuy: !this.data.isBuy,
 			});
+			this.getServerData()
 		}
 	},
 	/**

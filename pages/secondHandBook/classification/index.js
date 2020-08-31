@@ -1,5 +1,8 @@
 // pages/SHB/classification/index.js
 var template = require("../tabbar_template/index.js");
+import {
+	request
+} from '../../../request/request.js'
 Page({
   /**
    * 页面的初始数据
@@ -81,7 +84,22 @@ Page({
     // 底部输入部分
     isShow: false,
   },
-
+	// 请求
+	getServerData(){
+		
+		const res = request({
+		  url: "book-market/book/"+this.data.classArr[this.data.chooseClass],
+		  data: {},
+		  method: "get"
+		})
+		res.then((res1)=>{
+			console.log(this.data.booksArr)
+			this.setData({
+				booksArr:res1.data.data
+			})
+			console.log(this.data.booksArr)
+		},)
+	},
   /**
    * 点击顶部切换分类的函数
    */
@@ -89,6 +107,7 @@ Page({
     this.setData({
       chooseClass: e.target.dataset.index,
     });
+	this.getServerData()
   },
 
   /**
@@ -97,12 +116,14 @@ Page({
    //tabBar部分
   onLoad: function (options) {
     template.tabbar("tabBar", 1, this)
+	this.getServerData()
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {},
+  onReady: function () {
+  },
 
   /**
    * 生命周期函数--监听页面显示

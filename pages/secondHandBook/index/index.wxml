@@ -29,8 +29,10 @@
 </view>
 <!-- 顶部粘性布局导航结束 -->
 <!-- 买书推荐开始 -->
-<view class="buy_box" wx:key="index" wx:for="{{booksArr}}">
-    <book_recommend booksArr="{{item}}"></book_recommend>
+<view class="buy_box" wx:key="index" wx:for="{{booksArr}}" bindtap="bookGo(123)">
+	<navigator class="test-item" url="/pages/secondHandBook/bookDetails/index?isbn={{item.isbn}}">
+		<book_recommend booksArr="{{item}}"></book_recommend>
+	</navigator>
 </view>
 <!-- 买书推荐结束 -->
 <!-- 借阅推荐开始 -->

@@ -20,24 +20,24 @@
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
-		"compileHotReLoad": false,
 		"babelSetting": {
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"useIsolateContext": true,
-		"useCompilerModule": false,
+		"useCompilerModule": true,
 		"userConfirmedUseCompilerModuleSwitch": false,
+		"compileHotReLoad": false,
 		"useMultiFrameRuntime": true,
 		"useApiHook": false,
+		"useIsolateContext": true,
 		"packNpmManually": false,
 		"packNpmRelationList": []
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.12.0",
 	"appid": "wxf530ae58cb2dd1f4",
-	"projectname": "xpu-helper",
+	"projectname": "xpu-helper-master",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

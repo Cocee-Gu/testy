@@ -1,4 +1,7 @@
 // pages/secondHandBook/bookDetails/index.js
+import {
+	request
+} from '../../../request/request.js'
 Page({
 
   /**
@@ -8,11 +11,25 @@ Page({
 
   },
 
+	getServerData(e) {
+		const res = request({
+		  url: "book-market/book/"+e,
+		  data: {},
+		  method: "get"
+		})
+		res.then((res1)=>{
+			
+			console.log(res1)
+			
+		})
+	},
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+	  console.log(options)
+	  this.getServerData(options.isbn)
   },
 
   /**

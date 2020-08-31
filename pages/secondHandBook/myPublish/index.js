@@ -1,5 +1,30 @@
+
+import {
+	request
+} from '../../../request/request.js'
 Page({
- 
+	getServerData() {
+		const res = request({
+		  url: "book-market/book/faction/"+(!this.data.currentData?'sell':'borrow')+'/openId/'+wx.getStorageSync("openId"),
+		  data: {
+			  'pageIndex':1,
+			  'pageSize':100
+		  },
+		  method: "get"
+		})
+		res.then((res1)=>{
+			console.log(res1)
+			if (this.data.currentData) {
+				this.setData({
+					bookArr:res1.data.data
+				})
+			}else{
+				this.setData({
+					booksArr:res1.data.data
+				})
+			}
+		})
+	},
   /**
    * 页面的初始数据
    */
@@ -79,6 +104,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+	  this.getServerData()
   },
   //获取当前滑块的index
   bindchange:function(e){
@@ -86,6 +112,7 @@ Page({
     that.setData({
       currentData: e.detail.current
     })
+	this.getServerData()
   },
   //点击切换，滑块index赋值
   checkCurrent:function(e){
